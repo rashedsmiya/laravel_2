@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/App.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <link rel="stylesheet" href="/resources/css/app.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="flex bg-Off-White">
+
+        <!-- Sidebar -->
+        <div class="w-64  border-r border-gray-200 p-6">
+            <!-- User Profile -->
+            <div class="relative flex">
+
+                <div class="flex items-center gap-3 ps-4 md:ps-6 pe-4 py-4 justify-between">
+
+                    <div class="flex items-center gap-3">
+                        <img src="resources/images/avatar.jpg" alt="User Avatar"
+                            class="inline-block w-10 h-10 max-w-full rounded-full border-gray-300 shadow-md ring-2 ring-white">
+                        <div class="flex flex-col leading-snug">
+                            <h6 class="text-sm font-bold text-gray-500">Ari Budin</h6>
+                            <p class="text-sm text-neutral-500 dark:text-neutral-400">Manager</p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 cursor-pointer">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.427.266.974.266 1.34 0z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                        </svg>
+                    </div>
+
+                </div>
+
+                <ul id="dropUser" data-type="dropdownmenu"
+                    class="[&amp;.show]:!opacity-100 [&amp;.show]:!visible opacity-0 invisible absolute end-3 top-16 z-30 w-56 min-w-40 p-3 text-sm border bg-primary-100 dark:bg-primary-900 border-primary-200 dark:border-primary-950 shadow-outset-fixed rounded-sm fioplahensmk mt-2">
+
+                    <li class="py-2.5 uajskeiolksb mb-2 border border-primary-200 dark:border-primary-950 shadow-inset">
+                        <a href="user/profile.html" class="flex layhetgsjdcb gap-3">
+                            Profile
+                        </a>
+                    </li>
+
+                    <li class="py-2.5 uajskeiolksb mb-2 border border-primary-200 dark:border-primary-950 shadow-inset">
+                        <a href="user/user-setting.html" class="flex layhetgsjdcb gap-3">
+                            Settings
+                        </a>
+                    </li>
+
+                    <li class="py-2.5 uajskeiolksb mb-2 border border-primary-200 dark:border-primary-950 shadow-inset">
+                        <a href="auth/logout.html" class="flex layhetgsjdcb gap-3">
+                            Sign Out
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+
+            <!-- Dashboard Section -->
+            <div class="mb-6">
+                <h4 class="text-gray-600 text-md uppercase tracking-wide mb-3">Dashboard</h4>
+                <div class="space-y-2 ">
+
+                    <a href="index.html">
+                        <div class="flex items-center gap-2 text-sm px-4 py-3 cursor-pointer rounded-lg bg-bg-whites        
+                border border-gray-300
+                shadow-soft 
+                transition-all duration-200 my-4">
+                            <i class="bi bi-clipboard-plus"></i>
+                            <p class="flex grow text-gray-500">Medical</p>
+                        </div>
+                    </a>
+                    <a href="smarthome.html">
+                        <div class="flex items-center gap-2 text-sm py-3 px-4 cursor-pointer 
+            rounded-md bg-bg-whitesgray  border border-gray-300 shadow-inset-dual my-4">
+                            <i class="bi bi bi-house text-gray-700"></i>
+                            <p class="flex-grow  text-gray-500">Smarthome</p>
+                        </div>
+                    </a>
+
+                    <a href="smartcar.html">
+                        <div class="flex items-center gap-2 text-sm py-3 px-4 cursor-pointer 
+            rounded-md border border-gray-300 shadow-inset-dual my-4">
+                            <i class="bi bi-car-front text-gray-700"></i>
+                            <p class="flex-grow text-gray-500">Smartcar</p>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+
+            <!-- UI Kit Section -->
+            <div>
+                <h4 class="text-gray-600 text-md  uppercase tracking-wide mb-3">UI Kit</h4>
+                <div class="space-y-2">
+
+                    <a href="Components.html">
+                        <div class="flex items-center gap-2 text-sm py-3 px-4 cursor-pointer 
+            rounded-md border-gray-300 shadow-inset-dual my-4">
+                            <i class="bi bi bi-layers text-gray-700"></i>
+                            <p class="flex-grow text-gray-500">Components</p>
+                        </div>
+                    </a>
+
+                    <a href="Forms.html">
+                        <div class="flex items-center gap-2 text-sm py-3 px-4 cursor-pointer 
+            rounded-md border-gray-300 shadow-inset-dual my-4">
+                            <i class="bi bi bi-list-task text-gray-700"></i>
+                            <p class="flex-grow text-gray-500">Forms</p>
+                        </div>
+                    </a>
+
+                    <a href="Content.html">
+                        <div class="flex items-center gap-2 text-sm py-3 px-4 cursor-pointer 
+            rounded-md border-gray-300 shadow-inset-dual my-4">
+                            <i class="bi bi-bar-chart text-gray-700"></i>
+                            <p class="flex-grow text-gray-500">Content</p>
+                        </div>
+                    </a>
+
+                    <a href="Charts.html">
+                        <div class="flex items-center gap-2 text-sm py-3 px-4 cursor-pointer 
+            rounded-md border-gray-300 shadow-inset-dual my-4">
+                            <i class="bi bi bi-grid-1x2 text-gray-700"></i>
+                            <p class="flex-grow text-gray-500">Charts</p>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Main Content -->
+        <div class="flex-1 flex flex-col">
+            <!-- Top Header -->
+            <div class="bg-Off-White border-b border-gray-200 px-8 py-4 flex items-center justify-between">
+                <div class="flex items-center gap-6">
+
+                    <button class="w-12 h-12 rounded-full flex items-center justify-center
+           bg-bg-whites-900
+           shadow-neumorphic">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                            class="h-5 w-5 text-gray-700">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 8h16M4 14h16M4 20h16" />
+                        </svg>
+                    </button>
+
+                    <button class="w-12 h-12 rounded-full flex items-center justify-center
+           bg-bg-whites-900
+           shadow-neumorphic">
+
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                            class="h-5 w-5 text-gray-700">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M21 21l-4.35-4.35m1.35-5.65a7 7 0 11-14 0 7 7 0 0114 0z" />
+                        </svg>
+
+                    </button>
+
+                </div>
+
+                <div class="flex items-center gap-6">
+                    <div class="w-full flex items-center justify-between px-4 py-3">
+
+                        <!-- Left Buttons -->
+                        <div class="flex items-center gap-3">
+                            <button class="w-10 h-10 rounded-full flex items-center justify-center bg-bg-whitesgray
+                       shadow-neumorphic">
+                                <!-- menu icon -->
+                                <div
+                                    class="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 cursor-pointer">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.427.266.974.266 1.34 0z">
+                                        </path>
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                    </svg>
+                                </div>
+                            </button>
+
+                            <button class="w-10 h-10 rounded-full flex items-center justify-center bg-bg-whites
+                       shadow-neumorphic">
+                                <!-- search icon -->
+                                <i class="bi bi-bell"></i>
+                            </button>
+                        </div>
+
+                        <!-- CENTER LOGO -->
+                        <div class="absolute left-1/2 -translate-x-1/2 flex items-center gap-2 font-black">
+
+                            <div class="w-10 h-10 rounded-sm flex items-center justify-center
+                    bg-bg-whitesgray
+                    shadow-neumorphic text-gray-500">
+                                N
+                            </div>
+                            <span class="text-xl  text-gray-500">eudash</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dashboard Content -->
+            <div class="w-full h-full bg-bg-whitesgray ">
+
+                <!-- Greeting -->
+                <h1 class="text-lg text-gray-800 mb-6">Hello, aribudin!</h1>
+
+                <div class="grid bg-Off-White  bg-bg-whitesgray  grid-cols-1 xl:grid-cols-2 gap-8 p-6">
+                    <div class="grid  gap-6  grid-cols-1 sm:grid-cols-2">
+                        <!-- widget -->
+
+                        <div class="cursor-pointer rounded-lg p-6 text-base border-gray-300 shadow-inset-dual my-4 ">
+                            <h4 class="font-bold mb-4 text-gray-500">Total patients</h4>
+                            <div class="flex items-center justify-between">
+                                <a class="w-16 h-16 rounded-full flex items-center justify-center
+                bg-bg-whites
+                shadow-neumorphic">
+                                    <i class="text-2xl bi bi-person"></i>
+                                </a>
+                                <h4 class="text-xl md:text-2xl ">
+                                    350
+                                </h4>
+                            </div>
+                        </div>
+
+                        <!-- widget -->
+                        <div class="cursor-pointer rounded-lg p-6 text-base border-gray-300 shadow-inset-dual my-4 ">
+                            <h4 class="font-bold mb-4 text-gray-500">Beds Occupied</h4>
+                            <div class="flex items-center justify-between">
+                                <a class="w-16 h-16 rounded-full flex items-center justify-center
+                bg-bg-whites
+                shadow-neumorphic">
+                                    <i class="text-2xl bi bi-hospital"></i>
+                                </a>
+                                <h4 class="text-xl md:text-2xl ">
+                                    350
+                                </h4>
+                            </div>
+                        </div>
+
+                        <!-- widget -->
+                        <div class="cursor-pointer rounded-lg p-6 text-base border-gray-300 shadow-inset-dual my-4 ">
+                            <h4 class="font-bold mb-4 text-gray-500">Revenue</h4>
+                            <div class="flex items-center justify-between">
+                                <a class="w-16 h-16 rounded-full flex items-center justify-center
+                bg-bg-whites
+                shadow-neumorphic">
+                                    <i class="text-2xl bi bi-coin"></i>
+                                </a>
+                                <h4 class="text-xl md:text-2xl  ">
+                                    350
+                                </h4>
+                            </div>
+                        </div>
+                        <!-- widget -->
+                        <div class="cursor-pointer rounded-lg p-6 text-base border-gray-300 shadow-inset-dual my-4 ">
+                            <h4 class=" font-bold mb-4 text-gray-500">Drug Inventory</h4>
+                            <div class="flex items-center justify-between">
+                                <a class="w-16 h-16 rounded-full flex items-center justify-center
+                bg-bg-whites
+                shadow-neumorphic">
+                                    <i class="text-2xl bi bi-capsule"></i>
+                                </a>
+                                <h4 class="text-xl md:text-2xl ">
+                                    350
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- widget -->
+                    <div class="shadow-inset-fixed rounded-lg p-6  text-base border-gray-300 shadow-inset-dual my-4 ">
+                        <h4 class=" font-bold mb-4 text-gray-500">Common Disease</h4>
+                        <div class="w-full md:w-3/4 px-3 mx-auto flex layhetgsjdcb vlaoethsnkma">
+                            <canvas class="max-w-full" id="Disease" width="532" height="532"
+                                style="display: block; box-sizing: border-box; height: 532px; width: 532px;"></canvas>
+                        </div>
+                    </div>
+
+                    <!-- widget -->
+                    <div class="shadow-inset-fixed rounded-lg p-6 text-base   border-gray-300 shadow-inset-dual my-4">
+                        <h4 class=" font-bold mb-4 text-gray-500">Patient Statistics</h4>
+                        <div class="relative aspect-[4/2]">
+                            <canvas class="max-w-full" id="PatientStatistic" width="742" height="371"
+                                style="display: block; box-sizing: border-box; height: 371px; width: 742px;"></canvas>
+                        </div>
+                    </div>
+
+
+                    <!-- widget -->
+                    <div class=" border-gray-300 shadow-inset-dual my-4 
+                rounded-lg p-6 text-base   ">
+                        <h4 class=" font-bold mb-4 text-gray-500">Medical Equipment</h4>
+                        <div class="relative aspect-[4/2]">
+                            <canvas class="max-w-full" id="Equipment"></canvas>
+                        </div>
+                    </div>
+
+
+                    <div class="shadow-inset-fixed rounded-lg py-2 text-base shadow-inset-dual my-4">
+                        <table class="w-full border-collapse text-left text-sm">
+                            <!-- Header -->
+                            <thead>
+                                <tr class="rounded-t-sm 
+               border border-primary-200  
+               shadow-insetDual">
+                                    <th class="py-3 text-center">Doctor</th>
+                                    <th class="py-3 text-center">Specialty</th>
+                                    <th class="py-3 text-center">Availability</th>
+                                </tr>
+                            </thead>
+
+
+                            <!-- Body -->
+                            <tbody class="divide-y divide-gray-200">
+                                <!-- Row -->
+                                <tr class="hover:bg-gray-100 ">
+                                    <td class="px-4 py-3">
+                                        <div class="flex items-center gap-3">
+                                            <img src="resources/images/avatar2.jpg"
+                                                class="h-10 w-10 rounded-full border border-gray-300 " alt="" />
+                                            <span class="font-medium ">
+                                                font-bold mb-4 text-gray-500h
+                                            </span>
+                                        </div>
+                                    </td>
+                                    <td class="px-4 py-3 text-gray-600 ">
+                                        Cardiologist
+                                    </td>
+                                    <td>
+                                        <div class="py-2 px-3 rounded-sm 
+                bg-green-600 border border-green-700 
+                shadow-shadowable
+                text-green-100 inline-flex text-xs">
+                                            Available
+                                        </div>
+                                    </td>
+
+                                </tr>
+
+                                <!-- Row -->
+                                <tr class="hover:bg-gray-100 ">
+                                    <td class="px-4 py-3">
+                                        <div class="flex items-center gap-3">
+                                            <img src="resources/images/avatar2.jpg"
+                                                class="h-10 w-10 rounded-full border border-gray-300 " alt="" />
+                                            <span class="font-medium ">
+                                                Dr. Emily Davis
+                                            </span>
+                                        </div>
+                                    </td>
+                                    <td class="px-4 py-3 text-gray-600 ">
+                                        Orthopedic Surgeon
+                                    </td>
+                                    <td>
+                                        <div class="py-2 px-3 rounded-sm 
+                bg-green-600 border border-green-700 
+                shadow-shadowable
+                text-green-100 inline-flex text-xs">
+                                            Available
+                                        </div>
+                                    </td>
+
+                                </tr>
+
+                                <!-- Row -->
+                                <tr class="hover:bg-gray-100 ">
+                                    <td class="px-4 py-3">
+                                        <div class="flex items-center gap-3">
+                                            <img src="resources/images/avatar2.jpg"
+                                                class="h-10 w-10 rounded-full border border-gray-300 " alt="" />
+                                            <span class="font-medium ">
+                                                Dr. John Smith
+                                            </span>
+                                        </div>
+                                    </td>
+                                    <td class="px-4 py-3 text-gray-600">
+                                        Pediatrician
+                                    </td>
+                                    <td>
+                                        <div class="py-2 px-3 rounded-sm 
+                bg-green-600 border border-green-700 
+            shadow-shadowable
+                text-green-100 inline-flex text-xs">
+                                            Available
+                                        </div>
+                                    </td>
+
+                                </tr>
+
+                                <!-- Row -->
+                                <tr class="hover:bg-gray-100 ">
+                                    <td class="px-4 py-3">
+                                        <div class="flex items-center gap-3">
+                                            <img src="resources/images/avatar2.jpg"
+                                                class="h-10 w-10 rounded-full border border-gray-300 " alt="" />
+                                            <span class="font-medium ">
+                                                Dr. John Smith
+                                            </span>
+                                        </div>
+                                    </td>
+                                    <td class="px-4 py-3 text-gray-600  ">
+                                        Dermatologist
+                                    </td>
+                                    <td>
+                                        <div class="py-2 px-3 rounded-sm 
+                bg-green-600 border border-green-700 
+                shadow-shadowable 
+                text-green-100 inline-flex text-xs">
+                                            Available
+                                        </div>
+                                    </td>
+
+                                </tr>
+
+                                <!-- Row -->
+                                <tr class="hover:bg-gray-100 ">
+                                    <td class="px-4 py-3">
+                                        <div class="flex items-center gap-3">
+                                            <img src="resources/images/avatar2.jpg"
+                                                class="h-10 w-10 rounded-full border border-gray-300 " alt="" />
+                                            <span class="font-medium ">
+                                                Dr. John Smith
+                                            </span>
+                                        </div>
+                                    </td>
+                                    <td class="px-4 py-3 text-gray-600 ">
+                                        Neurologist
+                                    </td>
+                                    <td>
+                                        <div
+                                            class="border-gray-300 shadow-inset-dual py-2 px-3 rounded-sm   border border-primary-200 dark:border-primary-950 inline-flex text-xs text-center">
+                                            Not Available
+                                        </div>
+                                    </td>
+                                </tr>
+                                <!-- Repeat rows as needed -->
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="shadow-inset-fixed rounded-lg py-2 text-base shadow-inset-dual my-4">
+                        <table class="w-full border-collapse text-left text-sm">
+                            <!-- Header -->
+                            <thead>
+                                <tr class="rounded-t-sm 
+               border border-primary-200  
+               shadow-insetDual">
+                                    <th class="py-3 text-center">Latest Patient</th>
+                                    <th class="py-3 text-center">Diseases</th>
+                                    <th class="py-3 text-center">Room No</th>
+                                </tr>
+                            </thead>
+
+
+                            <!-- Body -->
+                            <tbody class="divide-y divide-gray-200">
+                                <!-- Row -->
+                                <tr class="hover:bg-gray-100 ">
+                                    <td class="px-4 py-3">
+                                        <div class="flex items-center gap-3">
+
+                                            <span class="font-medium ">
+                                                John Doe
+                                            </span>
+                                        </div>
+                                    </td>
+                                    <td class="px-4 py-3 text-gray-600 ">
+                                        Fever
+                                    </td>
+                                    <td>
+                                        <div
+                                            class="border-gray-300 shadow-inset-dual py-2 px-3 rounded-sm   border border-primary-200 dark:border-primary-950 inline-flex text-xs text-center">
+                                            101
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <!-- Row -->
+                                <tr class="hover:bg-gray-100 ">
+                                    <td class="px-4 py-3">
+                                        <div class="flex items-center gap-3">
+
+                                            <span class="font-medium ">
+                                                Jane Smith
+                                            </span>
+                                        </div>
+                                    </td>
+                                    <td class="px-4 py-3 text-gray-600 ">
+                                        Influenza
+                                    </td>
+                                    <td>
+                                        <div
+                                            class="border-gray-300 shadow-inset-dual py-2 px-3 rounded-sm   border border-primary-200 dark:border-primary-950 inline-flex text-xs text-center">
+                                            203
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <!-- Row -->
+                                <tr class="hover:bg-gray-100 ">
+                                    <td class="px-4 py-3">
+                                        <div class="flex items-center gap-3">
+
+                                            <span class="font-medium ">
+                                                Michael Brown
+                                            </span>
+                                        </div>
+                                    </td>
+                                    <td class="px-4 py-3 text-gray-600 ">
+                                        Fractured Arm
+                                    </td>
+                                    <td>
+                                        <div
+                                            class="border-gray-300 shadow-inset-dual py-2 px-3 rounded-sm   border border-primary-200 dark:border-primary-950 inline-flex text-xs text-center">
+                                            305
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <!-- Row -->
+                                <tr class="hover:bg-gray-100 ">
+                                    <td class="px-4 py-3">
+                                        <div class="flex items-center gap-3">
+
+                                            <span class="font-medium ">
+                                                Emily Davis
+                                            </span>
+                                        </div>
+                                    </td>
+                                    <td class="px-4 py-3 text-gray-600 ">
+                                        Allergies
+                                    </td>
+                                    <td>
+                                        <div
+                                            class="border-gray-300 shadow-inset-dual py-2 px-3 rounded-sm border border-primary-200 dark:border-primary-950 inline-flex text-xs text-center">
+                                            102
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <!-- Row -->
+                                <tr class="hover:bg-gray-100 ">
+                                    <td class="px-4 py-3">
+                                        <div class="flex items-center gap-3">
+
+                                            <span class="font-medium ">
+                                                Robert White
+                                            </span>
+                                        </div>
+                                    </td>
+                                    <td class="px-4 py-3 text-gray-600 ">
+                                        Migraine
+                                    </td>
+                                    <td>
+                                        <div
+                                            class="border-gray-300 shadow-inset-dual py-2 px-3 rounded-sm   border border-primary-200 dark:border-primary-950 inline-flex text-xs text-center">
+                                            204
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <!-- Row -->
+                                <tr class="hover:bg-gray-100 ">
+                                    <td class="px-4 py-3">
+                                        <div class="flex items-center gap-3">
+
+                                            <span class="font-medium ">
+                                                Robert White
+                                            </span>
+                                        </div>
+                                    </td>
+                                    <td class="px-4 py-3 text-gray-600 ">
+                                        Migraine
+                                    </td>
+                                    <td>
+                                        <div
+                                            class="border-gray-300 shadow-inset-dual py-2 px-3 rounded-sm   border border-primary-200 dark:border-primary-950 inline-flex text-xs text-center">
+                                            204
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <!-- Row -->
+                                <tr class="hover:bg-gray-100 ">
+                                    <td class="px-4 py-3">
+                                        <div class="flex items-center gap-3">
+
+                                            <span class="font-medium ">
+                                                Robert White
+                                            </span>
+                                        </div>
+                                    </td>
+                                    <td class="px-4 py-3 text-gray-600 ">
+                                        Migraine
+                                    </td>
+                                    <td>
+                                        <div
+                                            class="border-gray-300 shadow-inset-dual py-2 px-3 rounded-sm   border border-primary-200 dark:border-primary-950 inline-flex text-xs text-center">
+                                            204
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <!-- Row -->
+                                <tr class="hover:bg-gray-100 ">
+                                    <td class="px-4 py-3">
+                                        <div class="flex items-center gap-3">
+
+                                            <span class="font-medium ">
+                                                Robert White
+                                            </span>
+                                        </div>
+                                    </td>
+                                    <td class="px-4 py-3 text-gray-600 ">
+                                        Migraine
+                                    </td>
+                                    <td>
+                                        <div
+                                            class="border-gray-300 shadow-inset-dual py-2 px-3 rounded-sm   border border-primary-200 dark:border-primary-950 inline-flex text-xs text-center">
+                                            204
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <!-- Repeat rows as needed -->
+                            </tbody>
+                        </table>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <div class="px-6 ">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 bg-Off-White">
+                    <div
+                        class="shadow-inset-fixed rounded-lg p-6 text-base   border-gray-300 shadow-inset-dual my-4 hover:shadow-3xl transition-shadow duration-300">
+                        <h2 class="text-2xl font-bold text-gray-800 mb-6 pb-3">
+                            Financial Overview
+                        </h2>
+                        <div class="h-80">
+                            <canvas id="financialChart"></canvas>
+                        </div>
+                    </div>
+
+                    <div
+                        class="shadow-inset-fixed rounded-lg p-6 text-base  border-gray-300 shadow-inset-dual my-4 hover:shadow-3xl transition-shadow duration-300">
+                        <h2 class="text-2xl font-bold text-gray-800 mb-6 pb-3">
+                            Customer Satisfaction
+                        </h2>
+                        <div class="h-30 mb-8">
+                            <canvas id="gaugeChart"></canvas>
+                        </div>
+                        <div class="mt-6">
+                            <div class="flex justify-between items-center mb-3">
+                                <span class="text-gray-700 font-semibold">Adjust Satisfaction Level:</span>
+                                <span id="satisfactionValue" class="text-2xl font-bold text-purple-600">65</span>
+                            </div>
+                            <input type="range" id="satisfactionSlider" min="0" max="100" value="65"
+                                class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-purple-600">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <footer class="py-4 text-gray-600">
+                <p class="text-center">Copyright
+                    <script>
+                        document.write(new Date().getFullYear())
+                    </script>
+                </p>
+            </footer>
+
+        </div>
+
+    </div>
+
+    <script>
+        // Common Disease Doughnut Chart
+        // FIX: Changed 'commonDiseaseChart' to 'Disease'
+        const commonDiseaseCtx = document.getElementById('Disease').getContext('2d');
+        new Chart(commonDiseaseCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Flu', 'Hypertension', 'Diabetes', 'Common Cold', 'Asthma', 'Allergies'],
+                datasets: [{
+                    data: [25, 20, 15, 18, 12, 10],
+                    backgroundColor: ['#10b981', '#3b82f6', '#fbbf24', '#22d3ee', '#a855f7', '#f97316'],
+                    borderColor: '#fbbf24',
+                    borderWidth: 3
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: true,
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                }
+            }
+        });
+
+        // Patient Statistics Line Chart
+        // FIX: Changed 'patientStatsChart' to 'PatientStatistic'
+        const patientStatsCtx = document.getElementById('PatientStatistic').getContext('2d');
+        new Chart(patientStatsCtx, {
+            type: 'line',
+            data: {
+                labels: ['Jan 09', 'Jan 10', 'Jan 11', 'Jan 12', 'Jan 13', 'Jan 14', 'Jan 15'],
+                datasets: [{
+                    label: 'Dataset 1',
+                    data: [10, 5, 30, 8, 20, 15, 25],
+                    borderColor: '#10b981',
+                    backgroundColor: 'rgba(16, 185, 129, 0.1)',
+                    tension: 0.4,
+                    fill: true
+                },
+                {
+                    label: 'Dataset 2',
+                    data: [15, 20, 15, 18, 25, 20, 45],
+                    borderColor: '#ef4444',
+                    backgroundColor: 'rgba(239, 68, 68, 0.1)',
+                    tension: 0.4,
+                    fill: true
+                }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: true,
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 50,
+                        ticks: {
+                            stepSize: 5
+                        }
+                    }
+                }
+            }
+        });
+
+        // Medical Equipment Bar Chart
+
+        // FIX: Changed 'medicalEquipmentChart' to 'Equipment'
+        const medicalEquipmentCtx = document.getElementById('Equipment').getContext('2d');
+        new Chart(medicalEquipmentCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Jan 09', 'Jan 10', 'Jan 11', 'Jan 12', 'Jan 13', 'Jan 14', 'Jan 15'],
+                datasets: [{
+                    label: 'Medical Equipment',
+                    data: [80, 95, 85, 75, 90, 85, 95],
+                    backgroundColor: '#fbbf24'
+                },
+                {
+                    label: 'Drug Inventory',
+                    data: [90, 80, 90, 95, 75, 90, 85],
+                    backgroundColor: '#fbbf24'
+                }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: true,
+                indexAxis: 'x',
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 100,
+                        ticks: {
+                            stepSize: 20
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+
+    <script>
+        // Financial Report Bar Chart
+        const ctxFinancial = document.getElementById('financialChart').getContext('2d');
+
+        const financialChart = new Chart(ctxFinancial, {
+            type: 'bar',
+            data: {
+                labels: ['Revenue', 'Expenses', 'Net Income'],
+                datasets: [{
+                    data: [30000, 20000, 12000],
+                    backgroundColor: [
+                        'rgba(120, 155, 168, 0.9)',
+                        'rgba(255, 107, 129, 0.9)',
+                        'rgba(16, 185, 129, 0.9)'
+                    ],
+                    borderColor: [
+                        'rgba(120, 155, 168, 1)',
+                        'rgba(255, 107, 129, 1)',
+                        'rgba(16, 185, 129, 1)'
+                    ],
+                    borderWidth: 2,
+                    borderRadius: 8
+                }]
+            },
+            options: {
+                indexAxis: 'y',
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {
+                        backgroundColor: 'rgba(0, 0, 0, 0.8)',
+                        padding: 12,
+                        titleFont: {
+                            size: 14
+                        },
+                        bodyFont: {
+                            size: 13
+                        },
+                        callbacks: {
+                            label: function (context) {
+                                return '$' + context.parsed.x.toLocaleString();
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    x: {
+                        beginAtZero: true,
+                        max: 32000,
+                        ticks: {
+                            callback: function (value) {
+                                return '$' + (value / 1000) + 'k';
+                            },
+                            font: {
+                                size: 12
+                            }
+                        },
+                        grid: {
+                            color: 'rgba(0, 0, 0, 0.05)'
+                        }
+                    },
+                    y: {
+                        grid: {
+                            display: false
+                        },
+                        ticks: {
+                            font: {
+                                size: 13,
+                                weight: 'bold'
+                            }
+                        }
+                    }
+                }
+            }
+        });
+
+        // Satisfaction Gauge
+        let satisfaction = 65;
+        let gaugeChart = null;
+
+        const needlePlugin = {
+            id: 'needle',
+            afterDatasetDraw: function (chart) {
+                const {
+                    ctx,
+                    chartArea: {
+                        width,
+                        height
+                    }
+                } = chart;
+                const cx = width / 2;
+                const cy = height;
+                const radius = Math.min(width, height * 2) / 2;
+                const needleLength = radius * 0.75;
+                const needleAngle = 180 - (satisfaction * 1.8);
+
+                // Draw needle
+                ctx.save();
+                ctx.translate(cx, cy);
+                ctx.rotate((Math.PI / 180) * needleAngle);
+
+                ctx.beginPath();
+                ctx.moveTo(0, -4);
+                ctx.lineTo(needleLength, 0);
+                ctx.lineTo(0, 4);
+                ctx.fillStyle = '#1e40af';
+                ctx.fill();
+
+                ctx.beginPath();
+                ctx.arc(0, 0, 8, 0, Math.PI * 2);
+                ctx.fillStyle = '#1e40af';
+                ctx.fill();
+
+                ctx.restore();
+
+                // Draw satisfaction text
+                ctx.save();
+                ctx.fillStyle = '#333';
+                ctx.font = 'bold 24px sans-serif';
+                ctx.textAlign = 'center';
+                ctx.fillText(satisfaction + '%', cx, cy - 20);
+                ctx.restore();
+            }
+        };
+
+        function createGaugeChart() {
+            const ctxGauge = document.getElementById('gaugeChart').getContext('2d');
+
+            if (gaugeChart) {
+                gaugeChart.destroy();
+            }
+
+            gaugeChart = new Chart(ctxGauge, {
+                type: 'doughnut',
+                data: {
+                    datasets: [{
+                        data: [33.33, 33.33, 33.34],
+                        backgroundColor: ['#ef4444', '#eab308', '#22c55e'],
+                        borderWidth: 0,
+                        circumference: 180,
+                        rotation: 270
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            display: false
+                        },
+                        tooltip: {
+                            enabled: false
+                        }
+                    },
+                    cutout: '75%'
+                },
+                plugins: [needlePlugin]
+            });
+        }
+
+        const slider = document.getElementById('satisfactionSlider');
+        const valueDisplay = document.getElementById('satisfactionValue');
+
+        slider.addEventListener('input', function (e) {
+            satisfaction = Number(e.target.value);
+            valueDisplay.textContent = satisfaction;
+            createGaugeChart();
+        });
+
+        createGaugeChart();
+    </script>
+
+
+</body>
+
+</html>

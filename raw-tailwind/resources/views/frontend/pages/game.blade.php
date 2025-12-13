@@ -1,0 +1,31 @@
+<x-frontend::app>
+    @switch(Route::currentRouteName())
+        @case('game.index')
+            <x-slot name="title">{{ ucfirst(str_replace('-', ' ', $gameSlug)) . ' ' . ucfirst(str_replace('-', ' ', $categorySlug)) }}
+                {{__('Shop')}}</x-slot>
+            <x-slot name="pageSlug">{{ $gameSlug }}-{{ $categorySlug }}{{__('-shop')}}</x-slot>
+            <x-slot name="gameSlug">{{ $gameSlug }}</x-slot>
+            <x-slot name="categorySlug">{{ $categorySlug }}</x-slot>
+            <livewire:frontend.game.shop-component :gameSlug="$gameSlug" :categorySlug="$categorySlug" />
+        @break
+
+        @case('game.buy')
+            <x-slot name="title">{{ ucfirst(str_replace('-', ' ', $gameSlug)) . ' ' . ucfirst(str_replace('-', ' ', $categorySlug)) }}
+                {{__('Buy')}}</x-slot>
+            <x-slot name="pageSlug">{{ $gameSlug }}-{{ $categorySlug }}{{__('-shop')}}</x-slot>
+            <x-slot name="gameSlug">{{ $gameSlug }}</x-slot>
+            <x-slot name="categorySlug">{{ $categorySlug }}</x-slot>
+            <x-slot name="sellerSlug">{{ $sellerSlug }}</x-slot>
+            <livewire:frontend.game.buy-component :gameSlug="$gameSlug" :categorySlug="$categorySlug" :sellerSlug="$sellerSlug" />
+        @break
+
+        @case('game.checkout' && request()->route()->parameter('orderId'))
+            <x-slot
+                name="title">{{ ucfirst(str_replace('-', ' ', $gameSlug)) . ' ' . ucfirst(str_replace('-', ' ', $categorySlug)) }}
+                {{__('Checkout')}}</x-slot>
+            <x-slot name="pageSlug">{{ $gameSlug }}-{{ $categorySlug }}{{__('-checkout')}}</x-slot>
+            <livewire:frontend.game.checkout-component :gameSlug="$gameSlug" :categorySlug="$categorySlug" :sellerSlug="$sellerSlug" />
+        @break
+        @default
+    @endswitch
+</x-frontend::app>

@@ -1,0 +1,1295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/App.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <link rel="stylesheet" href="/resources/css/app.css">
+
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+    <script
+        src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns@3.0.0/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+    <script
+        src="https://cdn.jsdelivr.net/npm/chartjs-plugin-streaming@2.0.1/dist/chartjs-plugin-streaming.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="flex bg-Off-White">
+
+        <!-- Sidebar -->
+        <div class="w-64  border-r border-gray-200 p-6">
+            <!-- User Profile -->
+            <div class="relative flex">
+
+                <div class="flex items-center gap-3 ps-4 md:ps-6 pe-4 py-4 justify-between">
+
+                    <div class="flex items-center gap-3">
+                        <img src="resources/images/avatar.jpg" alt="User Avatar"
+                            class="inline-block w-10 h-10 max-w-full rounded-full border-gray-300 shadow-md ring-2 ring-white">
+                        <div class="flex flex-col leading-snug">
+                            <h6 class="text-sm font-bold text-gray-500">Ari Budin</h6>
+                            <p class="text-sm text-neutral-500 dark:text-neutral-400">Manager</p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 cursor-pointer">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.427.266.974.266 1.34 0z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                        </svg>
+                    </div>
+
+                </div>
+
+                <ul id="dropUser" data-type="dropdownmenu"
+                    class="[&amp;.show]:!opacity-100 [&amp;.show]:!visible opacity-0 invisible absolute end-3 top-16 z-30 w-56 min-w-40 p-3 text-sm border bg-primary-100 dark:bg-primary-900 border-primary-200 dark:border-primary-950 shadow-outset-fixed rounded-sm fioplahensmk mt-2">
+
+                    <li class="py-2.5 uajskeiolksb mb-2 border border-primary-200 dark:border-primary-950 shadow-inset">
+                        <a href="user/profile.html" class="flex layhetgsjdcb gap-3">
+                            Profile
+                        </a>
+                    </li>
+
+                    <li class="py-2.5 uajskeiolksb mb-2 border border-primary-200 dark:border-primary-950 shadow-inset">
+                        <a href="user/user-setting.html" class="flex layhetgsjdcb gap-3">
+                            Settings
+                        </a>
+                    </li>
+
+                    <li class="py-2.5 uajskeiolksb mb-2 border border-primary-200 dark:border-primary-950 shadow-inset">
+                        <a href="auth/logout.html" class="flex layhetgsjdcb gap-3">
+                            Sign Out
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+
+            <!-- Dashboard Section -->
+            <div class="mb-6">
+                <h4 class="text-gray-600 text-md uppercase tracking-wide mb-3">Dashboard</h4>
+                <div class="space-y-2 ">
+
+                    <a href="index.html">
+                        <div class="flex items-center gap-2 text-sm px-4 py-3 cursor-pointer rounded-lg bg-bg-whites        
+                border border-gray-300
+                shadow-soft 
+                transition-all duration-200 my-4">
+                            <i class="bi bi-clipboard-plus"></i>
+                            <p class="flex grow text-gray-500">Medical</p>
+                        </div>
+                    </a>
+                    <a href="smarthome.html">
+                        <div class="flex items-center gap-2 text-sm py-3 px-4 cursor-pointer 
+            rounded-md bg-bg-whitesgray  border border-gray-300 shadow-inset-dual my-4">
+                            <i class="bi bi bi-house text-gray-700"></i>
+                            <p class="flex-grow  text-gray-500">Smarthome</p>
+                        </div>
+                    </a>
+
+                    <a href="smartcar.html">
+                        <div class="flex items-center gap-2 text-sm py-3 px-4 cursor-pointer 
+            rounded-md border border-gray-300 shadow-inset-dual my-4">
+                            <i class="bi bi-car-front text-gray-700"></i>
+                            <p class="flex-grow text-gray-500">Smartcar</p>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+
+            <!-- UI Kit Section -->
+            <div>
+                <h4 class="text-gray-600 text-md  uppercase tracking-wide mb-3">UI Kit</h4>
+                <div class="space-y-2">
+
+                    <a href="Components.html">
+                        <div class="flex items-center gap-2 text-sm py-3 px-4 cursor-pointer 
+            rounded-md border-gray-300 shadow-inset-dual my-4">
+                            <i class="bi bi bi-layers text-gray-700"></i>
+                            <p class="flex-grow text-gray-500">Components</p>
+                        </div>
+                    </a>
+
+                    <a href="Forms.html">
+                        <div class="flex items-center gap-2 text-sm py-3 px-4 cursor-pointer 
+            rounded-md border-gray-300 shadow-inset-dual my-4">
+                            <i class="bi bi bi-list-task text-gray-700"></i>
+                            <p class="flex-grow text-gray-500">Forms</p>
+                        </div>
+                    </a>
+
+                    <a href="Content.html">
+                        <div class="flex items-center gap-2 text-sm py-3 px-4 cursor-pointer 
+            rounded-md border-gray-300 shadow-inset-dual my-4">
+                            <i class="bi bi-bar-chart text-gray-700"></i>
+                            <p class="flex-grow text-gray-500">Content</p>
+                        </div>
+                    </a>
+
+                    <a href="Charts.html">
+                        <div class="flex items-center gap-2 text-sm py-3 px-4 cursor-pointer 
+            rounded-md border-gray-300 shadow-inset-dual my-4">
+                            <i class="bi bi bi-grid-1x2 text-gray-700"></i>
+                            <p class="flex-grow text-gray-500">Charts</p>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Main Content -->
+        <div class="flex-1 flex flex-col">
+            <!-- Top Header -->
+            <div class="bg-Off-White border-b border-gray-200 px-8 py-4 flex items-center justify-between">
+                <div class="flex items-center gap-6">
+
+                    <button class="w-12 h-12 rounded-full flex items-center justify-center
+           bg-bg-whites-900
+           shadow-neumorphic">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                            class="h-5 w-5 text-gray-700">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 8h16M4 14h16M4 20h16" />
+                        </svg>
+                    </button>
+
+                    <button class="w-12 h-12 rounded-full flex items-center justify-center
+           bg-bg-whites-900
+           shadow-neumorphic">
+
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                            class="h-5 w-5 text-gray-700">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M21 21l-4.35-4.35m1.35-5.65a7 7 0 11-14 0 7 7 0 0114 0z" />
+                        </svg>
+
+                    </button>
+
+                </div>
+
+                <div class="flex items-center gap-6">
+                    <div class="w-full flex items-center justify-between px-4 py-3">
+
+                        <!-- Left Buttons -->
+                        <div class="flex items-center gap-3">
+                            <button class="w-10 h-10 rounded-full flex items-center justify-center bg-bg-whitesgray
+                       shadow-neumorphic">
+                                <!-- menu icon -->
+                                <div
+                                    class="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 cursor-pointer">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.427.266.974.266 1.34 0z">
+                                        </path>
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                    </svg>
+                                </div>
+                            </button>
+
+                            <button class="w-10 h-10 rounded-full flex items-center justify-center bg-bg-whites
+                       shadow-neumorphic">
+                                <!-- search icon -->
+                                <i class="bi bi-bell"></i>
+                            </button>
+                        </div>
+
+                        <!-- CENTER LOGO -->
+                        <div class="absolute left-1/2 -translate-x-1/2 flex items-center gap-2 font-black">
+
+                            <div class="w-10 h-10 rounded-sm flex items-center justify-center
+                    bg-bg-whitesgray
+                    shadow-neumorphic text-gray-500">
+                                N
+                            </div>
+                            <span class="text-xl  text-gray-500">eudash</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dashboard Content -->
+            <div class="w-full h-full bg-bg-whitesgray ">
+
+                <!-- Greeting -->
+                <h1 class="text-lg text-gray-800 mb-6">Charts Js</h1>
+
+                <div class="grid grid-cols-2 gap-4 p-4">
+
+                    <div
+                        class="p-4 text-base  border border-gray-200 shadow-inset-fixed bg-primary-100  border-primary-200 rounded-lg cursor-pointer shadow-inset-dual shadow-inset-fixed">
+                        <h4 class="font-bold mb-2 text-gray-500">Line chart</h4>
+                        <div class="relative">
+                            <div class="relative aspect-[4/2]">
+                                <canvas class="max-w-full" id="DailySessions"></canvas>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div
+                        class="p-4 text-base  border border-gray-200 shadow-inset-fixed bg-primary-100  border-primary-200 rounded-lg cursor-pointer shadow-inset-dual shadow-inset-fixed">
+                        <h4 class="font-bold mb-2 text-gray-500">Bar chart</h4>
+                        <div class="relative">
+                            <div class="relative aspect-[4/2] pb-2">
+                                <canvas class="max-w-full absolute inset-0 w-full h-full" id="DailyPageviews"></canvas>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="grid grid-cols-2 gap-4 p-4">
+
+                    <div
+                        class="p-4 text-base  border border-gray-200 shadow-inset-fixed bg-primary-100  border-primary-200 rounded-lg cursor-pointer shadow-inset-dual shadow-inset-fixed">
+                        <h4 class="font-bold mb-2 text-gray-500">Line chart thin</h4>
+                        <div class="relative">
+                            <div class="relative aspect-[4/2] pb-2">
+                                <canvas class="max-w-full absolute inset-0 w-full h-full" id="Pageviews"></canvas>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                    <div
+                        class="p-4 text-base  border border-gray-200 shadow-inset-fixed bg-primary-100  border-primary-200 rounded-lg cursor-pointer shadow-inset-dual shadow-inset-fixed">
+                        <h4 class="font-bold mb-2">Bar chart horizontal</h4>
+                        <div class="relative">
+                            <div class="relative aspect-[4/2] pb-2">
+                                <canvas class="max-w-full absolute inset-0 w-full h-full" id="ChartReferral"></canvas>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="grid grid-cols-2 gap-4 p-4">
+                    <div
+                        class="p-4 text-base  border border-gray-200 shadow-inset-fixed bg-primary-100  border-primary-200 rounded-lg cursor-pointer shadow-inset-dual shadow-inset-fixed">
+                        <h4 class="font-bold mb-2">Doughnut chart</h4>
+                        <div class="relative">
+                            <div class="relative aspect-square max-w-sm mx-auto">
+                                <canvas class="max-w-full absolute inset-0 w-full h-full" id="ChannelChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="p-4 text-base  border border-gray-200 shadow-inset-fixed bg-primary-100  border-primary-200 rounded-lg cursor-pointer shadow-inset-dual shadow-inset-fixed">
+                        <h4 class="font-bold mb-2">Pie chart</h4>
+                        <div class="relative">
+                            <div class="relative aspect-square max-w-sm mx-auto">
+                                <canvas class="max-w-full absolute inset-0 w-full h-full" id="ChartVisitor"></canvas>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="grid grid-cols-2 gap-4 p-4">
+                    <div
+                        class="p-4 text-base  border border-gray-200 shadow-inset-fixed bg-primary-100  border-primary-200 rounded-lg cursor-pointer shadow-inset-dual shadow-inset-fixed">
+                        <h4 class="font-bold mb-2">Bar chart 2</h4>
+                        <div class="relative">
+                            <div class="relative aspect-[4/2] pb-2">
+                                <canvas class="max-w-full absolute inset-0 w-full h-full" id="BarChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="p-4 text-base  border border-gray-200 shadow-inset-fixed bg-primary-100  border-primary-200 rounded-lg cursor-pointer shadow-inset-dual shadow-inset-fixed">
+                        <h4 class="font-bold mb-2">Line chart area</h4>
+                        <div class="relative">
+                            <div class="relative aspect-[4/2] pb-2">
+                                <canvas class="max-w-full absolute inset-0 w-full h-full" id="LineArea"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="grid grid-cols-2 gap-4 p-4">
+                    <div
+                        class="p-4 text-base  border border-gray-200 shadow-inset-fixed bg-primary-100  border-primary-200 rounded-lg cursor-pointer shadow-inset-dual shadow-inset-fixed">
+                        <h4 class="font-bold mb-2">Line chart interpolation</h4>
+                        <div class="relative">
+                            <div class="relative aspect-[4/2] pb-2">
+                                <canvas class="max-w-full absolute inset-0 w-full h-full" id="SalesTargetLine"></canvas>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="p-4 text-base  border border-gray-200 shadow-inset-fixed bg-primary-100  border-primary-200 rounded-lg cursor-pointer shadow-inset-dual shadow-inset-fixed">
+                        <h4 class="font-bold mb-2">Horizontal Bar chart 2</h4>
+                        <div class="relative">
+                            <div class="relative aspect-[4/2] pb-2">
+                                <canvas class="max-w-full absolute inset-0 w-full h-full" id="Growth"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="grid grid-cols-2 gap-2 p-4">
+                    <div
+                        class="p-4 text-base  border border-gray-200 shadow-inset-fixed bg-primary-100  border-primary-200 rounded-lg cursor-pointer shadow-inset-dual shadow-inset-fixed">
+                        <h4 class="font-bold mb-2">Realtime Chart Bar</h4>
+                        <div class="relative aspect-[4/2]">
+                            <canvas id="UserOnline" class="absolute inset-0 w-full h-full"></canvas>
+                        </div>
+                    </div>
+
+                    <div
+                        class="p-4 text-base  border border-gray-200 shadow-inset-fixed bg-primary-100  border-primary-200 rounded-lg cursor-pointer shadow-inset-dual shadow-inset-fixed">
+                        <h4 class="font-bold mb-2">Realtime Chart Line</h4>
+                        <div class="relative aspect-[4/2]">
+                            <canvas id="RealPageviews" class="absolute inset-0 w-full h-full"></canvas>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <footer class="py-4 text-gray-600">
+                <p class="text-center">Copyright
+                    <script>
+                        document.write(new Date().getFullYear())
+                    </script>
+                </p>
+            </footer>
+
+        </div>
+
+    </div>
+
+    <script>
+
+        document.addEventListener('DOMContentLoaded', () => {
+
+            const canvas = document.getElementById('RealPageviews');
+            if (!canvas) return;
+
+            const ctxRealtimeLine = canvas.getContext('2d');
+
+            new Chart(ctxRealtimeLine, {
+                type: 'line',
+                data: {
+                    datasets: [{
+                        label: 'Pageviews',
+                        borderColor: 'rgb(100, 116, 139)',
+                        backgroundColor: 'transparent',
+                        borderWidth: 2,
+                        pointRadius: 3,
+                        pointBackgroundColor: 'rgb(100, 116, 139)',
+                        tension: 0.2,
+                        data: []
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: {
+                            mode: 'index',
+                            intersect: false
+                        }
+                    },
+                    scales: {
+                        x: {
+                            type: 'realtime',
+                            realtime: {
+                                duration: 10000,
+                                refresh: 1000,
+                                delay: 2000,
+                                onRefresh: chart => {
+                                    chart.data.datasets[0].data.push({
+                                        x: Date.now(),
+                                        y: Math.floor(Math.random() * 600) + 300
+                                    });
+                                }
+                            },
+                            grid: { display: false }
+                        },
+                        y: {
+                            min: 100,
+                            max: 1000,
+                            ticks: {
+                                stepSize: 100,
+                                color: 'rgb(107, 114, 128)'
+                            },
+                            grid: {
+                                color: 'rgb(229, 231, 235)'
+                            }
+                        }
+                    }
+                }
+            });
+
+        });
+
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            const canvas = document.getElementById('UserOnline');
+            if (!canvas) return;
+
+            const ctxRealtime = canvas.getContext('2d');
+
+            new Chart(ctxRealtime, {
+                type: 'bar',
+                data: {
+                    datasets: [{
+                        label: 'Users Online',
+                        backgroundColor: 'rgb(20, 184, 166)',
+                        borderRadius: 4,
+                        data: []
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false }
+                    },
+                    scales: {
+                        x: {
+                            type: 'realtime',
+                            realtime: {
+                                duration: 10000,
+                                refresh: 1000,
+                                delay: 2000,
+                                onRefresh: chart => {
+                                    chart.data.datasets[0].data.push({
+                                        x: Date.now(),
+                                        y: Math.floor(Math.random() * 1400) + 100
+                                    });
+                                }
+                            },
+                            grid: { display: false },
+                            ticks: {
+                                color: 'rgb(107, 114, 128)'
+                            }
+                        },
+                        y: {
+                            min: 0,
+                            max: 1500,
+                            ticks: {
+                                stepSize: 500,
+                                color: 'rgb(107, 114, 128)'
+                            },
+                            grid: {
+                                color: 'rgb(229, 231, 235)'
+                            }
+                        }
+                    }
+                }
+            });
+
+        });
+    </script>
+
+    <script>
+        // ** JavaScript for Chart.js Grouped Horizontal Bar Chart **
+
+        const ctxGrowth = document.getElementById('Growth').getContext('2d');
+
+        // Sample data points for two series across several categories
+        const growthLabels = ['Q1 2023', 'Q2 2023', 'Q3 2023', 'Q4 2023', 'Q1 2024'];
+        const revenueData = [1800, 2200, 2500, 3100, 3500]; // Darker Bars (Revenue)
+        const targetData = [1500, 2000, 2600, 3000, 3400];  // Lighter Bars (Target)
+
+        const groupedHorizontalBarChartConfig = {
+            type: 'bar',
+            data: {
+                labels: growthLabels,
+                datasets: [
+                    {
+                        label: 'Revenue',
+                        data: revenueData,
+                        // Darker Blue/Slate Color
+                        backgroundColor: 'rgb(59, 130, 246)', // Blue-500
+                        borderColor: 'transparent',
+                    },
+                    {
+                        label: 'Target',
+                        data: targetData,
+                        // Lighter Blue/Slate Color
+                        backgroundColor: 'rgb(147, 197, 253)', // Blue-300
+                        borderColor: 'transparent',
+                    }
+                ]
+            },
+            options: {
+                indexAxis: 'y', // ** KEY: Makes the bar chart horizontal **
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: true, // Display legend to identify the two series
+                        position: 'bottom',
+                    },
+                    tooltip: {
+                        mode: 'index',
+                        intersect: false,
+                    },
+                },
+                scales: {
+                    // X-axis is the value axis (horizontal)
+                    x: {
+                        // Ensures the bars are grouped, not stacked
+                        stacked: false,
+                        beginAtZero: true,
+                        grid: {
+                            color: 'rgb(229, 231, 235)'
+                        },
+                        ticks: {
+                            color: 'rgb(107, 114, 128)'
+                        }
+                    },
+                    // Y-axis is the category axis (vertical)
+                    y: {
+                        // Ensures the bars are grouped, not stacked
+                        stacked: false,
+                        grid: {
+                            display: false // Hide vertical grid lines
+                        },
+                        ticks: {
+                            color: 'rgb(107, 114, 128)'
+                        }
+                    }
+                }
+            }
+        };
+
+        // Initialize the grouped horizontal bar chart
+        new Chart(ctxGrowth, groupedHorizontalBarChartConfig);
+    </script>
+
+    <script>
+        // ** JavaScript for Chart.js Interpolation Line Chart **
+
+        const ctxSales = document.getElementById('SalesTargetLine').getContext('2d');
+
+        // Sample data points to match the visual trend for 12 months (Nov to Oct)
+        const actualSalesData = [
+            620000, 610000, 850000, 870000, 840000, 700000, 780000, 920000, 950000, 990000,
+        ]; // Actual Sales (Solid Gray Line - Nov to Aug)
+
+        const targetSalesData = [
+            600000, 630000, 820000, 880000, 850000, 800000, 830000, 840000, 850000, 870000,
+        ]; // Sales Target (Dotted Pink Line - Nov to Aug)
+
+        const chartLabels = [
+            'Nov', 'Dec', 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct'
+        ];
+
+        const salesTargetChartConfig = {
+            type: 'line',
+            data: {
+                labels: chartLabels,
+                datasets: [
+                    {
+                        label: 'Actual Sales',
+                        data: actualSalesData,
+                        // Solid Gray Line Styling
+                        borderColor: 'rgb(100, 116, 139)', // Slate-500 equivalent
+                        backgroundColor: 'transparent',
+                        pointRadius: 4,
+                        pointBackgroundColor: 'rgb(100, 116, 139)',
+                        tension: 0.4, // Smooth interpolation
+                        fill: false,
+                        borderWidth: 3
+                    },
+                    {
+                        label: 'Sales Target',
+                        data: targetSalesData,
+                        // Dotted Pink Line Styling
+                        borderColor: 'rgb(236, 72, 153)', // Pink-500 equivalent
+                        backgroundColor: 'transparent',
+                        pointRadius: 4,
+                        pointBackgroundColor: 'rgb(236, 72, 153)',
+                        tension: 0.4, // Smooth interpolation
+                        fill: false,
+                        borderWidth: 3,
+                        borderDash: [5, 5] // ** KEY: Makes the line dotted **
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: false // Hide the legend
+                    },
+                    tooltip: {
+                        mode: 'index',
+                        intersect: false,
+                    },
+                },
+                scales: {
+                    x: {
+                        grid: {
+                            display: false
+                        },
+                        ticks: {
+                            color: 'rgb(107, 114, 128)'
+                        }
+                    },
+                    y: {
+                        beginAtZero: true,
+                        max: 1200000,
+                        // Configure the grid and ticks to match the image's currency format and steps
+                        grid: {
+                            color: 'rgb(229, 231, 235)'
+                        },
+                        ticks: {
+                            stepSize: 200000, // 200,000 steps
+                            color: 'rgb(107, 114, 128)',
+                            callback: function (value, index, ticks) {
+                                // Format the tick value with $ and K/M for readability
+                                if (value >= 1000000) {
+                                    return '$' + (value / 1000000) + 'M';
+                                }
+                                if (value >= 1000) {
+                                    return '$' + (value / 1000) + 'K';
+                                }
+                                return '$' + value;
+                            }
+                        }
+                    }
+                }
+            }
+        };
+
+        // Initialize the line chart
+        new Chart(ctxSales, salesTargetChartConfig);
+    </script>
+
+    <script>
+        // ** JavaScript for Chart.js Area Line Chart **
+
+        const ctxArea = document.getElementById('LineArea').getContext('2d');
+
+        // Sample data points to match the visual trend in the image (Jan 1 to Jan 12)
+        const areaDataPoints = [
+            120, 470, 320, 170, 180, 360, 320, 420, 290, 560, 450, 390
+        ];
+
+        const areaLabels = [
+            'Jan 1', 'Jan 2', 'Jan 3', 'Jan 4', 'Jan 5', 'Jan 6',
+            'Jan 7', 'Jan 8', 'Jan 9', 'Jan 10', 'Jan 11', 'Jan 12'
+        ];
+
+        const areaLineChartConfig = {
+            type: 'line',
+            data: {
+                labels: areaLabels,
+                datasets: [{
+                    label: 'Data Trend',
+                    data: areaDataPoints,
+
+                    // --- Line Styling ---
+                    borderColor: 'rgb(100, 116, 139)', // Slate-500 equivalent
+                    borderWidth: 2,
+                    pointRadius: 0, // No visible data points
+                    tension: 0.4, // Smooth curve
+
+                    // --- Area Fill Styling ---
+                    fill: true, // ** KEY: Enables the area fill **
+                    backgroundColor: (context) => {
+                        const chart = context.chart;
+                        const { ctx, chartArea } = chart;
+
+                        if (!chartArea) {
+                            return null;
+                        }
+
+                        // Define the gradient from top (light slate) to bottom (transparent)
+                        const gradient = ctx.createLinearGradient(0, chartArea.top, 0, chartArea.bottom);
+                        gradient.addColorStop(0, 'rgba(100, 116, 139, 0.25)'); // Light Slate, 25% opaque at the top
+                        gradient.addColorStop(1, 'rgba(100, 116, 139, 0)');     // Fully transparent at the bottom
+                        return gradient;
+                    },
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {
+                        mode: 'index',
+                        intersect: false,
+                    },
+                },
+                scales: {
+                    x: {
+                        grid: {
+                            display: false
+                        },
+                        ticks: {
+                            color: 'rgb(107, 114, 128)'
+                        }
+                    },
+                    y: {
+                        beginAtZero: false,
+                        min: 100, // Matches the image's lowest tick
+                        max: 600, // Matches the image's highest tick
+                        grid: {
+                            color: 'rgb(229, 231, 235)'
+                        },
+                        ticks: {
+                            stepSize: 50, // 50 unit steps
+                            color: 'rgb(107, 114, 128)'
+                        }
+                    }
+                }
+            }
+        };
+
+        // Initialize the area line chart
+        new Chart(ctxArea, areaLineChartConfig);
+    </script>
+
+    <script>
+        // ** JavaScript for Chart.js Grouped Bar Chart **
+
+        const ctxBar2 = document.getElementById('BarChart').getContext('2d');
+
+        // Sample data points to match the visual proportions in the image
+        const bar2Labels = ['Jan 1', 'Jan 2', 'Jan 3', 'Jan 4', 'Jan 5', 'Jan 6', 'Jan 7'];
+        const salesData = [1150, 1300, 1850, 1850, 2150, 1500, 2150]; // Lighter Bars (Sales)
+        const profitData = [650, 700, 850, 700, 650, 700, 850];    // Darker Bars (Profit)
+
+        const groupedBarChartConfig = {
+            type: 'bar',
+            data: {
+                labels: bar2Labels,
+                datasets: [
+                    {
+                        label: 'Sales',
+                        data: salesData,
+                        // Lighter Slate Gray for Sales
+                        backgroundColor: 'rgb(148, 163, 184)', // Slate-400 equivalent
+                        borderColor: 'transparent',
+                        // This ensures bars are side-by-side (grouped), not stacked
+                        barPercentage: 0.9,
+                        categoryPercentage: 0.8
+                    },
+                    {
+                        label: 'Profit',
+                        data: profitData,
+                        // Darker Slate Gray for Profit
+                        backgroundColor: 'rgb(71, 85, 105)', // Slate-700 equivalent
+                        borderColor: 'transparent',
+                        barPercentage: 0.9,
+                        categoryPercentage: 0.8
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: true, // ** KEY: Must display the legend to identify the series **
+                        position: 'bottom',
+                        labels: {
+                            color: 'rgb(71, 85, 105)',
+                            padding: 20
+                        }
+                    },
+                    tooltip: {
+                        mode: 'index',
+                        intersect: false,
+                    },
+                },
+                scales: {
+                    x: {
+                        // Ensure the bars are grouped, not stacked
+                        stacked: false,
+                        grid: {
+                            display: false
+                        },
+                        ticks: {
+                            color: 'rgb(107, 114, 128)' // Gray-500
+                        }
+                    },
+                    y: {
+                        // Set max Y value to 2,500 to match the image
+                        max: 2500,
+                        // Ensure the bars are grouped, not stacked
+                        stacked: false,
+                        min: 0,
+                        // Configure the grid to show light horizontal lines
+                        grid: {
+                            color: 'rgb(229, 231, 235)' // Gray-200
+                        },
+                        // Set ticks at 500 unit intervals
+                        ticks: {
+                            stepSize: 500,
+                            color: 'rgb(107, 114, 128)' // Gray-500
+                        }
+                    }
+                }
+            }
+        };
+
+        // Initialize the grouped bar chart
+        new Chart(ctxBar2, groupedBarChartConfig);
+    </script>
+
+    <script>
+        // ** JavaScript for Chart.js Pie Chart **
+
+        const ctxPie = document.getElementById('ChartVisitor').getContext('2d');
+
+        // Approximate data points based on the segment sizes in the image (~65% Green, ~35% Gray)
+        const pieData = [
+            65, // Large Green segment (approx 65%)
+            35  // Smaller Slate-Gray segment (approx 35%)
+        ];
+
+        // Define colors to match the image: Bright Green and Slate Gray
+        const pieColors = [
+            'rgb(52, 211, 153)',  // Bright Green (Emerald/Green-400/500 equivalent)
+            'rgb(100, 116, 139)'   // Slate Gray (Slate-500 equivalent)
+        ];
+
+        const pieChartConfig = {
+            type: 'pie', // ** KEY: type is 'pie' **
+            data: {
+                labels: ['New Visitors', 'Returning Visitors'],
+                datasets: [{
+                    label: 'Visitor Distribution',
+                    data: pieData,
+                    backgroundColor: pieColors,
+                    borderColor: 'white', // White border between segments
+                    borderWidth: 2,
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: false // Hide the legend since it's not in the image
+                    },
+                    tooltip: {
+                        // Ensure tooltips are enabled for interaction
+                    }
+                },
+            }
+        };
+
+        // Initialize the pie chart
+        new Chart(ctxPie, pieChartConfig);
+    </script>
+
+    <script>
+        // ** JavaScript for Chart.js Doughnut Chart **
+
+        const ctxDoughnut = document.getElementById('ChannelChart').getContext('2d');
+
+        // Approximate data points based on the segment sizes in the image
+        const doughnutData = [
+            50, // Large Orange segment (approx 50%)
+            30, // Medium Pink segment (approx 30%)
+            12, // Small Blue segment (approx 12%)
+            8   // Smallest Green segment (approx 8%)
+        ];
+
+        // Define colors to match the image: Gold/Orange, Pink, Sky Blue, Bright Green
+        const doughnutColors = [
+            'rgb(245, 158, 11)',  // Gold/Orange (Amber-600)
+            'rgb(236, 72, 153)',  // Pink (Pink-500)
+            'rgb(59, 130, 246)',  // Sky Blue (Blue-500)
+            'rgb(16, 185, 129)'   // Bright Green (Emerald-500)
+        ];
+
+        const doughnutChartConfig = {
+            type: 'doughnut', // ** KEY: type is 'doughnut' **
+            data: {
+                // Labels are not shown in the image, but are needed for tooltips
+                labels: ['Segment A', 'Segment B', 'Segment C', 'Segment D'],
+                datasets: [{
+                    label: 'Data Distribution',
+                    data: doughnutData,
+                    backgroundColor: doughnutColors,
+                    borderColor: 'white', // White border between segments
+                    borderWidth: 2,
+                    // Configure the doughnut thickness (the hole size)
+                    cutout: '75%', // Makes the ring relatively thin, adjust as needed (e.g., '60%')
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: false // Hide the legend since it's not in the image
+                    },
+                    tooltip: {
+                        // Ensure tooltips are enabled for interaction
+                    }
+                },
+            }
+        };
+
+        // Initialize the doughnut chart
+        new Chart(ctxDoughnut, doughnutChartConfig);
+    </script>
+
+    <script>
+        // ** JavaScript for Chart.js Horizontal Bar Chart **
+
+        const ctxReferral = document.getElementById('ChartReferral').getContext('2d');
+
+        // Sample data: Referral sources and counts
+        const referralLabels = [
+            'Google Search', 'Direct Traffic', 'Social Media', 'Email Campaign', 'Other'
+        ];
+        const referralDataPoints = [
+            2500, 1800, 1200, 800, 500
+        ];
+
+        const horizontalBarChartConfig = {
+            type: 'bar',
+            data: {
+                labels: referralLabels,
+                datasets: [{
+                    label: 'Referral Count',
+                    data: referralDataPoints,
+                    // Styling to match the muted slate/gray color
+                    backgroundColor: 'rgb(100, 116, 139)', // Slate-500 equivalent
+                    borderColor: 'transparent',
+                    barThickness: 'flex', // Ensures bars are sized appropriately
+                }]
+            },
+            options: {
+                indexAxis: 'y', // ** KEY: Makes the bar chart horizontal **
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {
+                        mode: 'index',
+                        intersect: false,
+                    },
+                },
+                scales: {
+                    // X-axis is now the value axis (horizontal)
+                    x: {
+                        beginAtZero: true,
+                        // Configure the grid to show light vertical lines
+                        grid: {
+                            color: 'rgb(229, 231, 235)' // Gray-200
+                        },
+                        ticks: {
+                            color: 'rgb(107, 114, 128)' // Gray-500
+                        }
+                    },
+                    // Y-axis is now the label axis (vertical)
+                    y: {
+                        grid: {
+                            display: false // Hide horizontal grid lines
+                        },
+                        ticks: {
+                            color: 'rgb(107, 114, 128)' // Gray-500
+                        }
+                    }
+                }
+            }
+        };
+
+        // Initialize the horizontal bar chart
+        new Chart(ctxReferral, horizontalBarChartConfig);
+    </script>
+
+    <script>
+        // ** JavaScript for Chart.js Line Chart Thin **
+
+        const ctxPageviews = document.getElementById('Pageviews').getContext('2d');
+
+        // Sample data points to create the highly curved, multi-peak trend seen in the image
+        const pageviewDataPoints = [
+            5000, 15000, 25000, 18000, 15000, 10000, 18000, 8000, 12000, 28000, 10000, 16000, 26000, 10000
+        ];
+
+        // Simple, generic labels since they are hidden anyway
+        const pageviewLabels = Array.from({ length: pageviewDataPoints.length }, (_, i) => `Point ${i + 1}`);
+
+        const thinLineChartConfig = {
+            type: 'line',
+            data: {
+                labels: pageviewLabels,
+                datasets: [{
+                    label: 'Pageviews',
+                    data: pageviewDataPoints,
+                    // --- Styling for Thin Yellow Line ---
+                    borderColor: 'rgb(245, 158, 11)', // Amber-600 equivalent (for yellow)
+                    borderWidth: 1.5, // Thin line
+                    pointRadius: 0, // No visible data points
+                    tension: 0.5, // High tension for smooth, deep curves
+
+                    // --- Styling for Filled Area ---
+                    fill: true,
+                    // Create a gradient for a smoother color transition in the fill area
+                    backgroundColor: (context) => {
+                        const chart = context.chart;
+                        const { ctx, chartArea } = chart;
+
+                        if (!chartArea) {
+                            return null;
+                        }
+
+                        // Define the gradient from top (yellow) to bottom (light gray/transparent)
+                        const gradient = ctx.createLinearGradient(0, chartArea.top, 0, chartArea.bottom);
+                        gradient.addColorStop(0, 'rgba(245, 158, 11, 0.4)'); // Amber-600, 40% opaque at the top
+                        gradient.addColorStop(0.5, 'rgba(245, 158, 11, 0.1)'); // Amber-600, 10% opaque in the middle
+                        gradient.addColorStop(1, 'rgba(245, 158, 11, 0)'); // Fully transparent at the bottom
+                        return gradient;
+                    },
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {
+                        enabled: false // Hide tooltips for a minimalist look
+                    },
+                },
+                // --- Scales configured to be invisible (Hidden Axes) ---
+                scales: {
+                    x: {
+                        display: false, // Hide X-axis
+                        grid: {
+                            display: false
+                        }
+                    },
+                    y: {
+                        display: false, // Hide Y-axis
+                        beginAtZero: true,
+                        grid: {
+                            display: false
+                        },
+                        ticks: {
+                            display: false
+                        }
+                    }
+                }
+            }
+        };
+
+        // Initialize the chart
+        new Chart(ctxPageviews, thinLineChartConfig);
+    </script>
+
+    <script>
+        // ** JavaScript for Chart.js Bar Chart **
+
+        const ctxBar = document.getElementById('DailyPageviews').getContext('2d');
+
+        // Data points closely matching the image's trend (approximate values)
+        const barDataPoints = [
+            11000, 14000, 20200, 15300, 15300, 22500, 11500, 11000, 14000, 20200, 15300, 22500, 11500, 11000
+        ];
+
+        // Re-using the labels from the line chart, which match the bar chart
+        const barLabels = [
+            'Jan 4', 'Jan 5', 'Jan 6', 'Jan 7', 'Jan 8', 'Jan 9', 'Jan 10', 'Jan 11',
+            'Jan 12', 'Jan 13', 'Jan 14', 'Jan 15', 'Jan 16', 'Jan 17'
+        ];
+        // Note: The image shows 14 data points, Jan 4 through Jan 17.
+
+        const barChartConfig = {
+            type: 'bar', // ** Key difference: type is 'bar' **
+            data: {
+                labels: barLabels,
+                datasets: [{
+                    label: 'Daily Pageviews',
+                    data: barDataPoints,
+                    // Styling to match the muted slate/gray color of the bars
+                    backgroundColor: 'rgb(100, 116, 139)', // Slate-500 equivalent
+                    // Remove the border around the bars
+                    borderColor: 'transparent',
+                    // Control bar width and spacing
+                    barPercentage: 0.8, // Adjust bar width relative to category spacing
+                    categoryPercentage: 0.9 // Adjust spacing between bars
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false, // Allows the Tailwind aspect-[4/2] to control size
+                plugins: {
+                    legend: {
+                        display: false // Hide the label box (legend)
+                    },
+                    tooltip: {
+                        mode: 'index',
+                        intersect: false,
+                    },
+                },
+                scales: {
+                    x: {
+                        // Remove the grid lines on the X-axis
+                        grid: {
+                            display: false
+                        },
+                        ticks: {
+                            color: 'rgb(107, 114, 128)' // Gray-500
+                        }
+                    },
+                    y: {
+                        beginAtZero: true,
+                        min: 0,
+                        max: 25000, // Set maximum Y value to 25,000 as seen in the image
+                        // Configure the grid to show light horizontal lines
+                        grid: {
+                            color: 'rgb(229, 231, 235)' // Gray-200
+                        },
+                        // Set ticks at 5,000 unit intervals (0, 5000, 10000, ...)
+                        ticks: {
+                            stepSize: 5000,
+                            color: 'rgb(107, 114, 128)' // Gray-500
+                        }
+                    }
+                }
+            }
+        };
+
+        // Initialize the bar chart
+        new Chart(ctxBar, barChartConfig);
+    </script>
+
+    <script>
+        // ** 2. JavaScript for Chart.js **
+        const ctx = document.getElementById('DailySessions').getContext('2d');
+
+        // Data points closely matching the image's trend (approximate values)
+        const dataPoints = [
+            2750, 3600, 3200, 3480, 2500, 3350, 4750, 2700, 3600, 3230, 3450, 2700, 3380, 4800
+        ];
+
+        const labels = [
+            'Jan 4', 'Jan 5', 'Jan 6', 'Jan 7', 'Jan 8', 'Jan 9', 'Jan 10', 'Jan 11',
+            'Jan 12', 'Jan 13', 'Jan 14', 'Jan 15', 'Jan 16', 'Jan 17'
+        ];
+
+        const chartConfig = {
+            type: 'line',
+            data: {
+                labels: labels,
+                datasets: [{
+                    // The label that appears in tooltips
+                    label: 'Daily Sessions',
+                    data: dataPoints,
+                    // Styling to match the image's line and points
+                    borderColor: 'rgb(100, 116, 139)', // Slate-500 equivalent
+                    backgroundColor: 'rgb(100, 116, 139, 0.5)',
+                    pointRadius: 4,
+                    pointBackgroundColor: 'rgb(100, 116, 139)',
+                    // Create a smooth curve
+                    tension: 0.4,
+                    fill: false
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false, // Allows the Tailwind aspect-[4/2] to control size
+                plugins: {
+                    legend: {
+                        display: false // Hide the label box (legend)
+                    },
+                    tooltip: {
+                        mode: 'index',
+                        intersect: false,
+                    },
+                },
+                scales: {
+                    x: {
+                        // Match the look by removing the default grid lines
+                        grid: {
+                            display: false
+                        },
+                        // Show ticks only for the labels provided (Jan 4, Jan 5, etc.)
+                        ticks: {
+                            color: 'rgb(107, 114, 128)' // Gray-500
+                        }
+                    },
+                    y: {
+                        // Match the look by removing the default y-axis line
+                        beginAtZero: false,
+                        min: 2500, // Set minimum Y value for better chart visualization
+                        max: 5000, // Set maximum Y value
+                        // Configure the grid to show light horizontal lines
+                        grid: {
+                            color: 'rgb(229, 231, 235)' // Gray-200
+                        },
+                        // Show ticks at 500 unit intervals for better readability
+                        ticks: {
+                            stepSize: 500,
+                            color: 'rgb(107, 114, 128)' // Gray-500
+                        }
+                    }
+                }
+            }
+        };
+
+        // Initialize the chart
+        new Chart(ctx, chartConfig);
+    </script>
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1"></script>
+
+    <!-- Luxon (date library) -->
+    <script src="https://cdn.jsdelivr.net/npm/luxon@3.4.4/build/global/luxon.min.js"></script>
+
+    <!-- Chart.js Luxon adapter -->
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-luxon@1.3.1"></script>
+
+    <!-- Chart.js Streaming plugin -->
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-streaming@2.0.0"></script>
+
+</body>
+
+</html>
