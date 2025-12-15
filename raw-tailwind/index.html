@@ -9,7 +9,6 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
     <link rel="stylesheet" href="/resources/css/app.css">
     <title>Document</title>
 </head>
@@ -19,7 +18,11 @@
     <div class="flex bg-Off-White">
 
         <!-- Sidebar -->
-        <div class="w-64  border-r border-gray-200 p-6">
+        <div class="fixed md:static inset-y-0 left-0 z-40
+            w-64 bg-Off-White
+            border-r border-gray-200 p-6
+            transform -translate-x-full md:translate-x-0
+            transition-transform duration-300">
             <!-- User Profile -->
             <div class="relative flex">
 
@@ -148,80 +151,94 @@
         <!-- Main Content -->
         <div class="flex-1 flex flex-col">
             <!-- Top Header -->
-            <div class="bg-Off-White border-b border-gray-200 px-8 py-4 flex items-center justify-between">
-                <div class="flex items-center gap-6">
+           <!-- HEADER -->
+        <div class="bg-Off-White border-b border-gray-200
+                    px-4 sm:px-8 py-3 sm:py-4
+                    flex items-center justify-between relative">
 
-                    <button class="w-12 h-12 rounded-full flex items-center justify-center
-           bg-bg-whites-900
-           shadow-neumorphic">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                            class="h-5 w-5 text-gray-700">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M4 8h16M4 14h16M4 20h16" />
-                        </svg>
-                    </button>
+            <!-- LEFT SECTION -->
+            <div class="flex items-center gap-3 sm:gap-6">
 
-                    <button class="w-12 h-12 rounded-full flex items-center justify-center
-           bg-bg-whites-900
-           shadow-neumorphic">
+                <!-- MOBILE MENU -->
+                <button class="w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center
+                            bg-bg-whites-900 shadow-neumorphic md:hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor"
+                        class="h-5 w-5 text-gray-700">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M4 8h16M4 14h16M4 20h16" />
+                    </svg>
+                </button>
 
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                            class="h-5 w-5 text-gray-700">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M21 21l-4.35-4.35m1.35-5.65a7 7 0 11-14 0 7 7 0 0114 0z" />
-                        </svg>
+                <!-- DESKTOP MENU -->
+                <button class="hidden md:flex w-12 h-12 rounded-full items-center justify-center
+                            bg-bg-whites-900 shadow-neumorphic">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor"
+                        class="h-5 w-5 text-gray-700">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M4 8h16M4 14h16M4 20h16" />
+                    </svg>
+                </button>
 
-                    </button>
+                <!-- SEARCH (HIDE ON MOBILE) -->
+                <button class="hidden sm:flex w-12 h-12 rounded-full items-center justify-center
+                            bg-bg-whites-900 shadow-neumorphic">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor"
+                        class="h-5 w-5 text-gray-700">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M21 21l-4.35-4.35m1.35-5.65a7 7 0 11-14 0 7 7 0 0114 0z" />
+                    </svg>
+                </button>
 
-                </div>
-
-                <div class="flex items-center gap-6">
-                    <div class="w-full flex items-center justify-between px-4 py-3">
-
-                        <!-- Left Buttons -->
-                        <div class="flex items-center gap-3">
-                            <button class="w-10 h-10 rounded-full flex items-center justify-center bg-bg-whitesgray
-                       shadow-neumorphic">
-                                <!-- menu icon -->
-                                <div
-                                    class="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 cursor-pointer">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
-                                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                            d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.427.266.974.266 1.34 0z">
-                                        </path>
-                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                            d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                                    </svg>
-                                </div>
-                            </button>
-
-                            <button class="w-10 h-10 rounded-full flex items-center justify-center bg-bg-whites
-                       shadow-neumorphic">
-                                <!-- search icon -->
-                                <i class="bi bi-bell"></i>
-                            </button>
-                        </div>
-
-                        <!-- CENTER LOGO -->
-                        <div class="absolute left-1/2 -translate-x-1/2 flex items-center gap-2 font-black">
-
-                            <div class="w-10 h-10 rounded-sm flex items-center justify-center
-                    bg-bg-whitesgray
-                    shadow-neumorphic text-gray-500">
-                                N
-                            </div>
-                            <span class="text-xl  text-gray-500">eudash</span>
-                        </div>
-                    </div>
-                </div>
             </div>
+
+            <!-- CENTER LOGO -->
+            <div class="absolute left-1/2 -translate-x-1/2
+                        flex items-center gap-2 font-black">
+
+                <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-sm flex items-center justify-center
+                            bg-bg-whitesgray shadow-neumorphic text-gray-500">
+                    N
+                </div>
+                <span class="text-lg sm:text-xl text-gray-500">
+                    eudash
+                </span>
+            </div>
+
+            <!-- RIGHT SECTION -->
+            <div class="flex items-center gap-2 sm:gap-3">
+
+                <button class="w-10 h-10 sm:w-10 sm:h-10 rounded-full flex items-center justify-center
+                            bg-bg-whitesgray shadow-neumorphic">
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                        class="h-6 w-6 text-gray-500"
+                        fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.427.266.974.266 1.34 0z" />
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                </button>
+
+                <button class="w-10 h-10 rounded-full flex items-center justify-center
+                            bg-bg-whites shadow-neumorphic">
+                    <i class="bi bi-bell"></i>
+                </button>
+
+            </div>
+        </div>
 
             <!-- Dashboard Content -->
             <div class="w-full h-full bg-bg-whitesgray ">
 
                 <!-- Greeting -->
-                <h1 class="text-lg text-gray-800 mb-6">Hello, aribudin!</h1>
+                <h1 class="text-lg text-gray-800 mb-6 p-2">Hello, aribudin!</h1>
 
                 <div class="grid bg-Off-White  bg-bg-whitesgray  grid-cols-1 xl:grid-cols-2 gap-8 p-6">
                     <div class="grid  gap-6  grid-cols-1 sm:grid-cols-2">
@@ -981,7 +998,6 @@
 
         createGaugeChart();
     </script>
-
 
 </body>
 

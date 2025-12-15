@@ -18,7 +18,7 @@
     <div class="flex bg-Off-White">
 
         <!-- Sidebar -->
-        <div class="w-64  border-r border-gray-200 p-6">
+        <div class="hidden md:block md:w-64 border-r border-gray-200 p-6">
             <!-- User Profile -->
             <div class="relative flex">
 
@@ -145,7 +145,7 @@
         <!-- Main Content -->
         <div class="flex-1 flex flex-col">
             <!-- Top Header -->
-            <div class="bg-Off-White border-b border-gray-200 px-8 py-4 flex items-center justify-between">
+            <div class="bg-Off-White border-b border-gray-200 px-4 md:px-8 py-3 md:py-4 flex items-center justify-between">
                 <div class="flex items-center gap-6">
 
                     <button class="w-12 h-12 rounded-full flex items-center justify-center
@@ -201,7 +201,7 @@
                         </div>
 
                         <!-- CENTER LOGO -->
-                        <div class="absolute left-1/2 -translate-x-1/2 flex items-center gap-2 font-black">
+                        <div class=" flex hidden md:flex absolute left-1/2 -translate-x-1/2 items-center gap-2 font-black">
 
                             <div class="w-10 h-10 rounded-sm flex items-center justify-center
                     bg-bg-whitesgray
@@ -218,12 +218,12 @@
             <div class="w-full h-full  ">
 
                 <!-- Greeting -->
-                <h1 class="text-lg text-gray-800 mb-6">Hello, aribudin!</h1>
+                <h1 class="text-lg text-gray-800 mb-6 p-2">Hello, aribudin!</h1>
 
-                <div class="grid grid-cols-3">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-2 lg:p-0">
 
                     <div
-                        class=" bg-Off-White border border-gray-200 shadow-inner dark:bg-gray-900 dark:border-gray-700 w-130 h-110 rounded-lg p-8 cursor-pointer  text-base pb-20  shadow-inset-dual my-4 ">
+                        class="w-full md:w-130 h-auto md:h-110 rounded-lg p-4 md:p-8 bg-Off-White border border-gray-200 shadow-inner dark:bg-gray-900 dark:border-gray-700 w-130 h-110 rounded-lg p-8 cursor-pointer  text-base pb-20  shadow-inset-dual my-4 ">
                         <h4 class="font-bold mb-6 text-gray-500 dark:text-gray-200">Battery Status</h4>
 
                         <div class="flex items-center mb-6 justify-between">
@@ -254,7 +254,7 @@
                     </div>
 
                     <div
-                        class="  shadow-inner bg-Off-White border border-gray-200 dark:bg-gray-900 dark:border-gray-700 w-130 h-110 rounded-lg p-8 cursor-pointer  text-base   shadow-inset-dual my-4">
+                        class=" w-full md:w-130 h-auto md:h-110 rounded-lg p-4 md:p-8 shadow-inner bg-Off-White border border-gray-200 dark:bg-gray-900 dark:border-gray-700 w-130 h-110 rounded-lg p-8 cursor-pointer  text-base   shadow-inset-dual my-4">
                         <h4 class="font-bold mb-4 text-gray-500 dark:text-gray-100">Door Lock</h4>
                         <div class="flex items-center justify-center gap-4">
                             <!-- Left side buttons -->
@@ -273,7 +273,7 @@
 
                             <!-- Car image -->
                             <img src="resources/images/car-top.png" alt="car"
-                                class="w-20">
+                                class="w-16 md:w-20">
 
                             <!-- Right side buttons -->
                             <div class="flex flex-col gap-2">
@@ -295,7 +295,7 @@
                     <div>
 
                         <div
-                            class=" bg-Off-White border border-gray-200 shadow-inner dark:bg-gray-900 dark:border-gray-700 w-130 h-110 rounded-lg p-8 cursor-pointer  text-base shadow-inset-dual my-4 ">
+                            class="w-full md:w-130 h-auto md:h-110 rounded-lg p-4 md:p-8 bg-Off-White border border-gray-200 shadow-inner dark:bg-gray-900 dark:border-gray-700 w-130 h-110 rounded-lg p-8 cursor-pointer  text-base shadow-inset-dual my-4 ">
                             <div class="relative">
                                 <!-- Tabs header -->
                                 <div class="flex gap-2 mb-4">
@@ -329,10 +329,10 @@
                     </div>
                 </div>
 
-                <div class="grid grid-cols-2">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 p-2 lg:p-0">
                     <div class="flex-1 py-1">
                         <div
-                            class=" rounded-lg p-4 cursor-pointer  text-base shadow-inset-dual my-4    overflow-hidden">
+                            class=" rounded-lg p-4 cursor-pointer  text-base shadow-inset-dual my-4 overflow-hidden ">
                             <!-- Image Preview -->
                             <div class="flex flex-col items-center justify-center  
      shadow-[1px_1px_8px_var(--color-gray-500),-4px_-4px_6px_#ffffff] bg-Off-White p-4 font-sans">
@@ -484,7 +484,7 @@
                         <h4 class="font-bold text-lg  text-gray-800 dark:text-gray-100">
                             Kilometers Traveled (km)
                         </h4>
-                        <div class="relative w-full h-96">
+                        <div class="relative w-full h-64 md:h-96">
                             <canvas id="kilometersChart"></canvas>
                         </div>
                     </div>
@@ -496,7 +496,7 @@
                             Electricity Consumption (kWh)
                         </h4>
 
-                        <div class="relative w-full h-96">
+                        <div class="relative w-full h-64 md:h-96">
                             <canvas id="electricityConsumptionChart"></canvas>
                         </div>
                     </div>
@@ -505,86 +505,106 @@
 
                 </div>
 
-                <div class="grid grid-cols-3">
+              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 ">
 
-                    <div
-                        class="shadow-inset-fixed bg-primary-100  border-primary-200 dark:bg-primary-900 dark:border-primary-950  rounded-lg p-6 cursor-pointer text-base shadow-inset-dual m-5 shadow-inset-fixed  bg-primary-100 border border-primary-200 dark:bg-primary-900 dark:border-primary-950">
-                        <h4 class="font-bold text-lg  text-gray-500 ">Tire Pressure</h4>
+                <!-- Tire Pressure -->
+                <div
+                    class="shadow-inset-fixed bg-primary-100 border border-primary-200 dark:bg-primary-900 dark:border-primary-950
+                        rounded-lg p-4 md:p-6 cursor-pointer text-base shadow-inset-dual m-3 md:m-5">
 
-                        <div class="flex justify-between items-start text-xs sm:text-sm">
+                    <h4 class="font-bold text-lg text-gray-500 mb-4">Tire Pressure</h4>
 
-                            <div class="flex flex-col items-center gap-2">
-                                <span class="text-gray-500 dark:text-gray-300">Front</span>
+                    <div class="flex justify-between items-start text-xs sm:text-sm">
 
-                                <div
-                                    class="shadow-neumorphic flex items-center justify-center w-15 h-15 rounded-full bg-Off-White border border-gray-300 shadow-lg dark:bg-gray-900 dark:border-gray-700 text-green-600 dark:text-green-400">
-                                    <i class="text-4xl bi bi-fan"></i>
-                                </div>
+                    <div class="flex flex-col items-center gap-2">
+                        <span class="text-gray-500">Front</span>
 
-                                <span class="mt-1 font-semibold text-gray-500 ">31/31 psi</span>
-                            </div>
-
-                            <div class="flex flex-col items-center gap-2">
-                                <span class="text-gray-500 ">Back</span>
-
-                                <div
-                                    class="shadow-neumorphic flex items-center justify-center w-15 h-15 rounded-full bg-Off-White border border-gray-300 shadow-lg   text-green-600 dark:text-green-400 ">
-                                    <i class="text-4xl bi bi-fan"></i>
-                                </div>
-
-                                <span class="mt-1 font-semibold text-gray-500 ">32/32 psi</span>
-                            </div>
-
+                        <div
+                        class="shadow-neumorphic flex items-center justify-center
+                                w-12 h-12 md:w-15 md:h-15
+                                rounded-full bg-Off-White border border-gray-300 shadow-lg
+                                text-green-600">
+                        <i class="text-3xl md:text-4xl bi bi-fan"></i>
                         </div>
+
+                        <span class="mt-1 font-semibold text-gray-500">31/31 psi</span>
                     </div>
 
-                    <div
-                        class="shadow-inset-fixed bg-primary-100  border-primary-200 dark:bg-primary-900 dark:border-primary-950  rounded-lg p-6 cursor-pointer text-base shadow-inset-dual m-5 shadow-inset-fixed  bg-primary-100 border border-primary-200 dark:bg-primary-900 dark:border-primary-950">
-                        <h4 class="font-bold text-lg  text-gray-500">Connected</h4>
+                    <div class="flex flex-col items-center gap-2">
+                        <span class="text-gray-500">Back</span>
 
-                        <div class="flex items-center gap-4">
-
-                            <div class="tab-btn active flex items-center gap-2 px-6 py-4 rounded  text-gray-500  font-medium  text-sm  cursor-pointer 
-             border  shadow-inset-dual ">
-                                <i class="bi bi-phone text-6xl "></i>
-                            </div>
-
-                            <div class="flex flex-col gap-1 text-sm text-gray-500">
-                                <h4 class="font-bold text-gray-500 ">Samsung Galaxy X12</h4>
-                                <p class="text-gray-500">Status: <span class="text-gray-500">Connected</span></p>
-                                <p class="text-gray-500">Latest: 12 min ago</p>
-                            </div>
+                        <div
+                        class="shadow-neumorphic flex items-center justify-center
+                                w-12 h-12 md:w-15 md:h-15
+                                rounded-full bg-Off-White border border-gray-300 shadow-lg
+                                text-green-600">
+                        <i class="text-3xl md:text-4xl bi bi-fan"></i>
                         </div>
+
+                        <span class="mt-1 font-semibold text-gray-500">32/32 psi</span>
                     </div>
-
-                    <div
-                        class="shadow-inset-fixed bg-primary-100  border-primary-200 dark:bg-primary-900 dark:border-primary-950  rounded-lg p-6 cursor-pointer text-base shadow-inset-dual m-5 shadow-inset-fixed  bg-primary-100 border border-primary-200 dark:bg-primary-900 dark:border-primary-950">
-                        <h4 class="font-bold text-lg  text-gray-500">Next Maintenance</h4>
-
-                        <div class="flex flex-col gap-2 text-sm text-gray-700 dark:text-gray-200">
-
-                            <div class="flex items-center gap-2 ">
-                                <i class="bi bi-lightning-fill "></i>
-                                <span class="text-gray-500">Electricity Service</span>
-                            </div>
-
-                            <div class="flex items-center gap-2">
-                                <i class="bi bi-calendar-date text-blue-500"></i>
-                                <span class="text-gray-500">Feb 12, 2024</span>
-                            </div>
-
-                            <div class=" flex items-center gap-2">
-                                <i class="bi bi-wrench-adjustable-circle-fill text-red-500"></i>
-                                <span class="text-gray-500">Sandiego Car</span>
-                            </div>
-                        </div>
 
                     </div>
                 </div>
 
+  <!-- Connected -->
+  <div
+    class="shadow-inset-fixed bg-primary-100 border border-primary-200 dark:bg-primary-900 dark:border-primary-950
+           rounded-lg p-4 md:p-6 cursor-pointer text-base shadow-inset-dual m-3 md:m-5">
+
+    <h4 class="font-bold text-lg text-gray-500 mb-4">Connected</h4>
+
+    <div class="flex items-center gap-4">
+
+      <div
+        class="tab-btn active flex items-center justify-center
+               px-4 py-3 md:px-6 md:py-4 rounded
+               text-gray-500 border shadow-inset-dual">
+        <i class="bi bi-phone text-4xl md:text-6xl"></i>
+      </div>
+
+      <div class="flex flex-col gap-1 text-sm text-gray-500">
+        <h4 class="font-bold">Samsung Galaxy X12</h4>
+        <p>Status: <span>Connected</span></p>
+        <p>Latest: 12 min ago</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Next Maintenance -->
+  <div
+    class="shadow-inset-fixed bg-primary-100 border border-primary-200 dark:bg-primary-900 dark:border-primary-950
+           rounded-lg p-4 md:p-6 cursor-pointer text-base shadow-inset-dual m-3 md:m-5">
+
+    <h4 class="font-bold text-lg text-gray-500 mb-4">Next Maintenance</h4>
+
+    <div class="flex flex-col gap-3 text-sm">
+
+      <div class="flex items-center gap-2">
+        <i class="bi bi-lightning-fill"></i>
+        <span class="text-gray-500">Electricity Service</span>
+      </div>
+
+      <div class="flex items-center gap-2">
+        <i class="bi bi-calendar-date text-blue-500"></i>
+        <span class="text-gray-500">Feb 12, 2024</span>
+      </div>
+
+      <div class="flex items-center gap-2">
+        <i class="bi bi-wrench-adjustable-circle-fill text-red-500"></i>
+        <span class="text-gray-500">Sandiego Car</span>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+
             </div>
 
-            <footer class="py-4 text-gray-500">
+            <footer class="py-3 md:py-4 text-sm md:text-base text-gray-500">
                 <p class="text-center">Copyright
                     <script>
                         document.write(new Date().getFullYear())

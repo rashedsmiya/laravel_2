@@ -18,375 +18,364 @@
         src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns@3.0.0/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
     <script
         src="https://cdn.jsdelivr.net/npm/chartjs-plugin-streaming@2.0.1/dist/chartjs-plugin-streaming.min.js"></script>
-    <title>Document</title>
+    <title>Charts</title>
 </head>
 
 <body>
 
-    <div class="flex bg-Off-White">
+   <div class="flex bg-Off-White min-h-screen">
 
-        <!-- Sidebar -->
-        <div class="w-64  border-r border-gray-200 p-6">
-            <!-- User Profile -->
-            <div class="relative flex">
-
-                <div class="flex items-center gap-3 ps-4 md:ps-6 pe-4 py-4 justify-between">
-
-                    <div class="flex items-center gap-3">
-                        <img src="resources/images/avatar.jpg" alt="User Avatar"
-                            class="inline-block w-10 h-10 max-w-full rounded-full border-gray-300 shadow-md ring-2 ring-white">
-                        <div class="flex flex-col leading-snug">
-                            <h6 class="text-sm font-bold text-gray-500">Ari Budin</h6>
-                            <p class="text-sm text-neutral-500 dark:text-neutral-400">Manager</p>
-                        </div>
+    <div id="sidebar"
+        class="
+            w-64 border-r border-gray-200 p-6 
+            bg-Off-White 
+            transition-all duration-300
+            
+            fixed h-full z-40 
+            -translate-x-full md:translate-x-0 
+            md:relative md:block 
+        ">
+        
+        <div class="relative flex mb-8">
+            <div class="flex items-center gap-3 ps-0 pe-0 py-4 justify-between w-full">
+                <div class="flex items-center gap-3">
+                    <img src="resources/images/avatar.jpg" alt="User Avatar"
+                        class="inline-block w-10 h-10 max-w-full rounded-full border-gray-300 shadow-md ring-2 ring-white">
+                    <div class="flex flex-col leading-snug">
+                        <h6 class="text-sm font-bold text-gray-500">Ari Budin</h6>
+                        <p class="text-sm text-neutral-500 dark:text-neutral-400">Manager</p>
                     </div>
-
-                    <div
-                        class="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 cursor-pointer">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                            stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.427.266.974.266 1.34 0z" />
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                        </svg>
-                    </div>
-
                 </div>
 
-                <ul id="dropUser" data-type="dropdownmenu"
-                    class="[&amp;.show]:!opacity-100 [&amp;.show]:!visible opacity-0 invisible absolute end-3 top-16 z-30 w-56 min-w-40 p-3 text-sm border bg-primary-100 dark:bg-primary-900 border-primary-200 dark:border-primary-950 shadow-outset-fixed rounded-sm fioplahensmk mt-2">
-
-                    <li class="py-2.5 uajskeiolksb mb-2 border border-primary-200 dark:border-primary-950 shadow-inset">
-                        <a href="user/profile.html" class="flex layhetgsjdcb gap-3">
-                            Profile
-                        </a>
-                    </li>
-
-                    <li class="py-2.5 uajskeiolksb mb-2 border border-primary-200 dark:border-primary-950 shadow-inset">
-                        <a href="user/user-setting.html" class="flex layhetgsjdcb gap-3">
-                            Settings
-                        </a>
-                    </li>
-
-                    <li class="py-2.5 uajskeiolksb mb-2 border border-primary-200 dark:border-primary-950 shadow-inset">
-                        <a href="auth/logout.html" class="flex layhetgsjdcb gap-3">
-                            Sign Out
-                        </a>
-                    </li>
-
-                </ul>
-            </div>
-
-            <!-- Dashboard Section -->
-            <div class="mb-6">
-                <h4 class="text-gray-600 text-md uppercase tracking-wide mb-3">Dashboard</h4>
-                <div class="space-y-2 ">
-
-                    <a href="index.html">
-                        <div class="flex items-center gap-2 text-sm px-4 py-3 cursor-pointer rounded-lg bg-bg-whites        
-                border border-gray-300
-                shadow-soft 
-                transition-all duration-200 my-4">
-                            <i class="bi bi-clipboard-plus"></i>
-                            <p class="flex grow text-gray-500">Medical</p>
-                        </div>
-                    </a>
-                    <a href="smarthome.html">
-                        <div class="flex items-center gap-2 text-sm py-3 px-4 cursor-pointer 
-            rounded-md bg-bg-whitesgray  border border-gray-300 shadow-inset-dual my-4">
-                            <i class="bi bi bi-house text-gray-700"></i>
-                            <p class="flex-grow  text-gray-500">Smarthome</p>
-                        </div>
-                    </a>
-
-                    <a href="smartcar.html">
-                        <div class="flex items-center gap-2 text-sm py-3 px-4 cursor-pointer 
-            rounded-md border border-gray-300 shadow-inset-dual my-4">
-                            <i class="bi bi-car-front text-gray-700"></i>
-                            <p class="flex-grow text-gray-500">Smartcar</p>
-                        </div>
-                    </a>
-
+                <div
+                    class="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 cursor-pointer">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.427.266.974.266 1.34 0z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
                 </div>
+
             </div>
 
-            <!-- UI Kit Section -->
-            <div>
-                <h4 class="text-gray-600 text-md  uppercase tracking-wide mb-3">UI Kit</h4>
-                <div class="space-y-2">
+            <ul id="dropUser" data-type="dropdownmenu"
+                class="[&amp;.show]:!opacity-100 [&amp;.show]:!visible opacity-0 invisible absolute end-3 top-16 z-30 w-56 min-w-40 p-3 text-sm border bg-primary-100 dark:bg-primary-900 border-primary-200 dark:border-primary-950 shadow-outset-fixed rounded-sm fioplahensmk mt-2">
 
-                    <a href="Components.html">
-                        <div class="flex items-center gap-2 text-sm py-3 px-4 cursor-pointer 
-            rounded-md border-gray-300 shadow-inset-dual my-4">
-                            <i class="bi bi bi-layers text-gray-700"></i>
-                            <p class="flex-grow text-gray-500">Components</p>
-                        </div>
+                <li class="py-2.5 uajskeiolksb mb-2 border border-primary-200 dark:border-primary-950 shadow-inset">
+                    <a href="user/profile.html" class="flex layhetgsjdcb gap-3">
+                        Profile
                     </a>
+                </li>
 
-                    <a href="Forms.html">
-                        <div class="flex items-center gap-2 text-sm py-3 px-4 cursor-pointer 
-            rounded-md border-gray-300 shadow-inset-dual my-4">
-                            <i class="bi bi bi-list-task text-gray-700"></i>
-                            <p class="flex-grow text-gray-500">Forms</p>
-                        </div>
+                <li class="py-2.5 uajskeiolksb mb-2 border border-primary-200 dark:border-primary-950 shadow-inset">
+                    <a href="user/user-setting.html" class="flex layhetgsjdcb gap-3">
+                        Settings
                     </a>
+                </li>
 
-                    <a href="Content.html">
-                        <div class="flex items-center gap-2 text-sm py-3 px-4 cursor-pointer 
-            rounded-md border-gray-300 shadow-inset-dual my-4">
-                            <i class="bi bi-bar-chart text-gray-700"></i>
-                            <p class="flex-grow text-gray-500">Content</p>
-                        </div>
+                <li class="py-2.5 uajskeiolksb mb-2 border border-primary-200 dark:border-primary-950 shadow-inset">
+                    <a href="auth/logout.html" class="flex layhetgsjdcb gap-3">
+                        Sign Out
                     </a>
+                </li>
 
-                    <a href="Charts.html">
-                        <div class="flex items-center gap-2 text-sm py-3 px-4 cursor-pointer 
-            rounded-md border-gray-300 shadow-inset-dual my-4">
-                            <i class="bi bi bi-grid-1x2 text-gray-700"></i>
-                            <p class="flex-grow text-gray-500">Charts</p>
-                        </div>
-                    </a>
-
-                </div>
-            </div>
-
+            </ul>
         </div>
 
-        <!-- Main Content -->
-        <div class="flex-1 flex flex-col">
-            <!-- Top Header -->
-            <div class="bg-Off-White border-b border-gray-200 px-8 py-4 flex items-center justify-between">
-                <div class="flex items-center gap-6">
+        <div class="mb-6">
+            <h4 class="text-gray-600 text-md uppercase tracking-wide mb-3">Dashboard</h4>
+            <div class="space-y-2 ">
 
-                    <button class="w-12 h-12 rounded-full flex items-center justify-center
-           bg-bg-whites-900
-           shadow-neumorphic">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                            class="h-5 w-5 text-gray-700">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M4 8h16M4 14h16M4 20h16" />
-                        </svg>
-                    </button>
-
-                    <button class="w-12 h-12 rounded-full flex items-center justify-center
-           bg-bg-whites-900
-           shadow-neumorphic">
-
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                            class="h-5 w-5 text-gray-700">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M21 21l-4.35-4.35m1.35-5.65a7 7 0 11-14 0 7 7 0 0114 0z" />
-                        </svg>
-
-                    </button>
-
-                </div>
-
-                <div class="flex items-center gap-6">
-                    <div class="w-full flex items-center justify-between px-4 py-3">
-
-                        <!-- Left Buttons -->
-                        <div class="flex items-center gap-3">
-                            <button class="w-10 h-10 rounded-full flex items-center justify-center bg-bg-whitesgray
-                       shadow-neumorphic">
-                                <!-- menu icon -->
-                                <div
-                                    class="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 cursor-pointer">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
-                                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                            d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.427.266.974.266 1.34 0z">
-                                        </path>
-                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                            d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                                    </svg>
-                                </div>
-                            </button>
-
-                            <button class="w-10 h-10 rounded-full flex items-center justify-center bg-bg-whites
-                       shadow-neumorphic">
-                                <!-- search icon -->
-                                <i class="bi bi-bell"></i>
-                            </button>
-                        </div>
-
-                        <!-- CENTER LOGO -->
-                        <div class="absolute left-1/2 -translate-x-1/2 flex items-center gap-2 font-black">
-
-                            <div class="w-10 h-10 rounded-sm flex items-center justify-center
-                    bg-bg-whitesgray
-                    shadow-neumorphic text-gray-500">
-                                N
-                            </div>
-                            <span class="text-xl  text-gray-500">eudash</span>
-                        </div>
+                <a href="index.html">
+                    <div class="flex items-center gap-2 text-sm px-4 py-3 cursor-pointer rounded-lg bg-bg-whites        
+            border border-gray-300
+            shadow-soft 
+            transition-all duration-200 my-4">
+                        <i class="bi bi-clipboard-plus"></i>
+                        <p class="flex grow text-gray-500">Medical</p>
                     </div>
-                </div>
-            </div>
-
-            <!-- Dashboard Content -->
-            <div class="w-full h-full bg-bg-whitesgray ">
-
-                <!-- Greeting -->
-                <h1 class="text-lg text-gray-800 mb-6">Charts Js</h1>
-
-                <div class="grid grid-cols-2 gap-4 p-4">
-
-                    <div
-                        class="p-4 text-base  border border-gray-200 shadow-inset-fixed bg-primary-100  border-primary-200 rounded-lg cursor-pointer shadow-inset-dual shadow-inset-fixed">
-                        <h4 class="font-bold mb-2 text-gray-500">Line chart</h4>
-                        <div class="relative">
-                            <div class="relative aspect-[4/2]">
-                                <canvas class="max-w-full" id="DailySessions"></canvas>
-                            </div>
-
-                        </div>
+                </a>
+                <a href="smarthome.html">
+                    <div class="flex items-center gap-2 text-sm py-3 px-4 cursor-pointer 
+            rounded-md bg-bg-whitesgray  border border-gray-300 shadow-inset-dual my-4">
+                        <i class="bi bi bi-house text-gray-700"></i>
+                        <p class="flex-grow  text-gray-500">Smarthome</p>
                     </div>
+                </a>
 
-                    <div
-                        class="p-4 text-base  border border-gray-200 shadow-inset-fixed bg-primary-100  border-primary-200 rounded-lg cursor-pointer shadow-inset-dual shadow-inset-fixed">
-                        <h4 class="font-bold mb-2 text-gray-500">Bar chart</h4>
-                        <div class="relative">
-                            <div class="relative aspect-[4/2] pb-2">
-                                <canvas class="max-w-full absolute inset-0 w-full h-full" id="DailyPageviews"></canvas>
-
-                            </div>
-
-
-                        </div>
+                <a href="smartcar.html">
+                    <div class="flex items-center gap-2 text-sm py-3 px-4 cursor-pointer 
+            rounded-md border border-gray-300 shadow-inset-dual my-4">
+                        <i class="bi bi-car-front text-gray-700"></i>
+                        <p class="flex-grow text-gray-500">Smartcar</p>
                     </div>
-
-                </div>
-
-                <div class="grid grid-cols-2 gap-4 p-4">
-
-                    <div
-                        class="p-4 text-base  border border-gray-200 shadow-inset-fixed bg-primary-100  border-primary-200 rounded-lg cursor-pointer shadow-inset-dual shadow-inset-fixed">
-                        <h4 class="font-bold mb-2 text-gray-500">Line chart thin</h4>
-                        <div class="relative">
-                            <div class="relative aspect-[4/2] pb-2">
-                                <canvas class="max-w-full absolute inset-0 w-full h-full" id="Pageviews"></canvas>
-
-                            </div>
-
-
-                        </div>
-                    </div>
-
-                    <div
-                        class="p-4 text-base  border border-gray-200 shadow-inset-fixed bg-primary-100  border-primary-200 rounded-lg cursor-pointer shadow-inset-dual shadow-inset-fixed">
-                        <h4 class="font-bold mb-2">Bar chart horizontal</h4>
-                        <div class="relative">
-                            <div class="relative aspect-[4/2] pb-2">
-                                <canvas class="max-w-full absolute inset-0 w-full h-full" id="ChartReferral"></canvas>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="grid grid-cols-2 gap-4 p-4">
-                    <div
-                        class="p-4 text-base  border border-gray-200 shadow-inset-fixed bg-primary-100  border-primary-200 rounded-lg cursor-pointer shadow-inset-dual shadow-inset-fixed">
-                        <h4 class="font-bold mb-2">Doughnut chart</h4>
-                        <div class="relative">
-                            <div class="relative aspect-square max-w-sm mx-auto">
-                                <canvas class="max-w-full absolute inset-0 w-full h-full" id="ChannelChart"></canvas>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div
-                        class="p-4 text-base  border border-gray-200 shadow-inset-fixed bg-primary-100  border-primary-200 rounded-lg cursor-pointer shadow-inset-dual shadow-inset-fixed">
-                        <h4 class="font-bold mb-2">Pie chart</h4>
-                        <div class="relative">
-                            <div class="relative aspect-square max-w-sm mx-auto">
-                                <canvas class="max-w-full absolute inset-0 w-full h-full" id="ChartVisitor"></canvas>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="grid grid-cols-2 gap-4 p-4">
-                    <div
-                        class="p-4 text-base  border border-gray-200 shadow-inset-fixed bg-primary-100  border-primary-200 rounded-lg cursor-pointer shadow-inset-dual shadow-inset-fixed">
-                        <h4 class="font-bold mb-2">Bar chart 2</h4>
-                        <div class="relative">
-                            <div class="relative aspect-[4/2] pb-2">
-                                <canvas class="max-w-full absolute inset-0 w-full h-full" id="BarChart"></canvas>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div
-                        class="p-4 text-base  border border-gray-200 shadow-inset-fixed bg-primary-100  border-primary-200 rounded-lg cursor-pointer shadow-inset-dual shadow-inset-fixed">
-                        <h4 class="font-bold mb-2">Line chart area</h4>
-                        <div class="relative">
-                            <div class="relative aspect-[4/2] pb-2">
-                                <canvas class="max-w-full absolute inset-0 w-full h-full" id="LineArea"></canvas>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="grid grid-cols-2 gap-4 p-4">
-                    <div
-                        class="p-4 text-base  border border-gray-200 shadow-inset-fixed bg-primary-100  border-primary-200 rounded-lg cursor-pointer shadow-inset-dual shadow-inset-fixed">
-                        <h4 class="font-bold mb-2">Line chart interpolation</h4>
-                        <div class="relative">
-                            <div class="relative aspect-[4/2] pb-2">
-                                <canvas class="max-w-full absolute inset-0 w-full h-full" id="SalesTargetLine"></canvas>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div
-                        class="p-4 text-base  border border-gray-200 shadow-inset-fixed bg-primary-100  border-primary-200 rounded-lg cursor-pointer shadow-inset-dual shadow-inset-fixed">
-                        <h4 class="font-bold mb-2">Horizontal Bar chart 2</h4>
-                        <div class="relative">
-                            <div class="relative aspect-[4/2] pb-2">
-                                <canvas class="max-w-full absolute inset-0 w-full h-full" id="Growth"></canvas>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="grid grid-cols-2 gap-2 p-4">
-                    <div
-                        class="p-4 text-base  border border-gray-200 shadow-inset-fixed bg-primary-100  border-primary-200 rounded-lg cursor-pointer shadow-inset-dual shadow-inset-fixed">
-                        <h4 class="font-bold mb-2">Realtime Chart Bar</h4>
-                        <div class="relative aspect-[4/2]">
-                            <canvas id="UserOnline" class="absolute inset-0 w-full h-full"></canvas>
-                        </div>
-                    </div>
-
-                    <div
-                        class="p-4 text-base  border border-gray-200 shadow-inset-fixed bg-primary-100  border-primary-200 rounded-lg cursor-pointer shadow-inset-dual shadow-inset-fixed">
-                        <h4 class="font-bold mb-2">Realtime Chart Line</h4>
-                        <div class="relative aspect-[4/2]">
-                            <canvas id="RealPageviews" class="absolute inset-0 w-full h-full"></canvas>
-                        </div>
-                    </div>
-
-                </div>
+                </a>
 
             </div>
+        </div>
 
+        <div>
+            <h4 class="text-gray-600 text-md  uppercase tracking-wide mb-3">UI Kit</h4>
+            <div class="space-y-2">
 
-            <footer class="py-4 text-gray-600">
-                <p class="text-center">Copyright
-                    <script>
-                        document.write(new Date().getFullYear())
-                    </script>
-                </p>
-            </footer>
+                <a href="Components.html">
+                    <div class="flex items-center gap-2 text-sm py-3 px-4 cursor-pointer 
+            rounded-md border-gray-300 shadow-inset-dual my-4">
+                        <i class="bi bi bi-layers text-gray-700"></i>
+                        <p class="flex-grow text-gray-500">Components</p>
+                    </div>
+                </a>
 
+                <a href="Forms.html">
+                    <div class="flex items-center gap-2 text-sm py-3 px-4 cursor-pointer 
+            rounded-md border-gray-300 shadow-inset-dual my-4">
+                        <i class="bi bi bi-list-task text-gray-700"></i>
+                        <p class="flex-grow text-gray-500">Forms</p>
+                    </div>
+                </a>
+
+                <a href="Content.html">
+                    <div class="flex items-center gap-2 text-sm py-3 px-4 cursor-pointer 
+            rounded-md border-gray-300 shadow-inset-dual my-4">
+                        <i class="bi bi-bar-chart text-gray-700"></i>
+                        <p class="flex-grow text-gray-500">Content</p>
+                    </div>
+                </a>
+
+                <a href="Charts.html">
+                    <div class="flex items-center gap-2 text-sm py-3 px-4 cursor-pointer 
+            rounded-md border-gray-300 shadow-inset-dual my-4">
+                        <i class="bi bi bi-grid-1x2 text-gray-700"></i>
+                        <p class="flex-grow text-gray-500">Charts</p>
+                    </div>
+                </a>
+
+            </div>
         </div>
 
     </div>
+
+    <div class="flex-1 flex flex-col w-full">
+         <div class="bg-Off-White border-b border-gray-200
+            px-4 sm:px-8 py-3 sm:py-4
+            flex items-center justify-between relative">
+
+    <!-- LEFT SECTION -->
+    <div class="flex items-center gap-3 sm:gap-6">
+
+        <!-- MOBILE MENU -->
+        <button class="w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center
+                       bg-bg-whites-900 shadow-neumorphic md:hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-5 w-5 text-gray-700">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 14h16M4 20h16"></path>
+            </svg>
+        </button>
+
+        <!-- DESKTOP MENU -->
+        <button class="hidden md:flex w-12 h-12 rounded-full items-center justify-center
+                       bg-bg-whites-900 shadow-neumorphic">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-5 w-5 text-gray-700">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 14h16M4 20h16"></path>
+            </svg>
+        </button>
+
+        <!-- SEARCH (HIDE ON MOBILE) -->
+        <button class="hidden sm:flex w-12 h-12 rounded-full items-center justify-center
+                       bg-bg-whites-900 shadow-neumorphic">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-5 w-5 text-gray-700">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35m1.35-5.65a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+            </svg>
+        </button>
+
+    </div>
+
+    <!-- CENTER LOGO -->
+    <div class="absolute left-1/2 -translate-x-1/2
+                flex items-center gap-2 font-black">
+
+        <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-sm flex items-center justify-center
+                    bg-bg-whitesgray shadow-neumorphic text-gray-500">
+            N
+        </div>
+        
+        <span class="text-lg sm:text-xl text-gray-500">
+            eudash
+        </span>
+    </div>
+
+    <!-- RIGHT SECTION -->
+    <div class="flex items-center gap-2 sm:gap-3">
+
+        <button class="w-10 h-10 sm:w-10 sm:h-10 rounded-full flex items-center justify-center
+                       bg-bg-whitesgray shadow-neumorphic">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.427.266.974.266 1.34 0z"></path>
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+            </svg>
+        </button>
+
+        <button class="w-10 h-10 rounded-full flex items-center justify-center
+                       bg-bg-whites shadow-neumorphic">
+            <i class="bi bi-bell"></i>
+        </button>
+
+    </div>
+</div>
+
+        <div class="w-full h-full bg-bg-whitesgray p-4 sm:p-6 md:p-8">
+
+            <h1 class="text-xl text-gray-800 mb-6 font-semibold">Charts Js</h1>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-4">
+
+                <div
+                    class="p-4 text-base border border-gray-200 shadow-inset-fixed bg-primary-100 border-primary-200 rounded-lg cursor-pointer shadow-inset-dual shadow-inset-fixed">
+                    <h4 class="font-bold mb-2 text-gray-500">Line chart</h4>
+                    <div class="relative">
+                        <div class="relative aspect-[4/3] sm:aspect-[4/2]">
+                            <canvas class="max-w-full" id="DailySessions"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="p-4 text-base border border-gray-200 shadow-inset-fixed bg-primary-100 border-primary-200 rounded-lg cursor-pointer shadow-inset-dual shadow-inset-fixed">
+                    <h4 class="font-bold mb-2 text-gray-500">Bar chart</h4>
+                    <div class="relative">
+                        <div class="relative aspect-[4/3] sm:aspect-[4/2] pb-2">
+                            <canvas class="max-w-full absolute inset-0 w-full h-full" id="DailyPageviews"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-4">
+
+                <div
+                    class="p-4 text-base border border-gray-200 shadow-inset-fixed bg-primary-100 border-primary-200 rounded-lg cursor-pointer shadow-inset-dual shadow-inset-fixed">
+                    <h4 class="font-bold mb-2 text-gray-500">Line chart thin</h4>
+                    <div class="relative">
+                        <div class="relative aspect-[4/3] sm:aspect-[4/2] pb-2">
+                            <canvas class="max-w-full absolute inset-0 w-full h-full" id="Pageviews"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="p-4 text-base border border-gray-200 shadow-inset-fixed bg-primary-100 border-primary-200 rounded-lg cursor-pointer shadow-inset-dual shadow-inset-fixed">
+                    <h4 class="font-bold mb-2">Bar chart horizontal</h4>
+                    <div class="relative">
+                        <div class="relative aspect-[4/3] sm:aspect-[4/2] pb-2">
+                            <canvas class="max-w-full absolute inset-0 w-full h-full" id="ChartReferral"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-4">
+                <div
+                    class="p-4 text-base border border-gray-200 shadow-inset-fixed bg-primary-100 border-primary-200 rounded-lg cursor-pointer shadow-inset-dual shadow-inset-fixed">
+                    <h4 class="font-bold mb-2">Doughnut chart</h4>
+                    <div class="relative">
+                        <div class="relative aspect-square max-w-xs mx-auto">
+                            <canvas class="max-w-full absolute inset-0 w-full h-full" id="ChannelChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="p-4 text-base border border-gray-200 shadow-inset-fixed bg-primary-100 border-primary-200 rounded-lg cursor-pointer shadow-inset-dual shadow-inset-fixed">
+                    <h4 class="font-bold mb-2">Pie chart</h4>
+                    <div class="relative">
+                        <div class="relative aspect-square max-w-xs mx-auto">
+                            <canvas class="max-w-full absolute inset-0 w-full h-full" id="ChartVisitor"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-4">
+                <div
+                    class="p-4 text-base border border-gray-200 shadow-inset-fixed bg-primary-100 border-primary-200 rounded-lg cursor-pointer shadow-inset-dual shadow-inset-fixed">
+                    <h4 class="font-bold mb-2">Bar chart 2</h4>
+                    <div class="relative">
+                        <div class="relative aspect-[4/3] sm:aspect-[4/2] pb-2">
+                            <canvas class="max-w-full absolute inset-0 w-full h-full" id="BarChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="p-4 text-base border border-gray-200 shadow-inset-fixed bg-primary-100 border-primary-200 rounded-lg cursor-pointer shadow-inset-dual shadow-inset-fixed">
+                    <h4 class="font-bold mb-2">Line chart area</h4>
+                    <div class="relative">
+                        <div class="relative aspect-[4/3] sm:aspect-[4/2] pb-2">
+                            <canvas class="max-w-full absolute inset-0 w-full h-full" id="LineArea"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-4">
+                <div
+                    class="p-4 text-base border border-gray-200 shadow-inset-fixed bg-primary-100 border-primary-200 rounded-lg cursor-pointer shadow-inset-dual shadow-inset-fixed">
+                    <h4 class="font-bold mb-2">Line chart interpolation</h4>
+                    <div class="relative">
+                        <div class="relative aspect-[4/3] sm:aspect-[4/2] pb-2">
+                            <canvas class="max-w-full absolute inset-0 w-full h-full" id="SalesTargetLine"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="p-4 text-base border border-gray-200 shadow-inset-fixed bg-primary-100 border-primary-200 rounded-lg cursor-pointer shadow-inset-dual shadow-inset-fixed">
+                    <h4 class="font-bold mb-2">Horizontal Bar chart 2</h4>
+                    <div class="relative">
+                        <div class="relative aspect-[4/3] sm:aspect-[4/2] pb-2">
+                            <canvas class="max-w-full absolute inset-0 w-full h-full" id="Growth"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-4">
+                <div
+                    class="p-4 text-base border border-gray-200 shadow-inset-fixed bg-primary-100 border-primary-200 rounded-lg cursor-pointer shadow-inset-dual shadow-inset-fixed">
+                    <h4 class="font-bold mb-2">Realtime Chart Bar</h4>
+                    <div class="relative aspect-[4/3] sm:aspect-[4/2]">
+                        <canvas id="UserOnline" class="absolute inset-0 w-full h-full"></canvas>
+                    </div>
+                </div>
+
+                <div
+                    class="p-4 text-base border border-gray-200 shadow-inset-fixed bg-primary-100 border-primary-200 rounded-lg cursor-pointer shadow-inset-dual shadow-inset-fixed">
+                    <h4 class="font-bold mb-2">Realtime Chart Line</h4>
+                    <div class="relative aspect-[4/3] sm:aspect-[4/2]">
+                        <canvas id="RealPageviews" class="absolute inset-0 w-full h-full"></canvas>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <footer class="py-4 text-gray-600">
+            <p class="text-center">Copyright
+                <script>
+                    document.write(new Date().getFullYear())
+                </script>
+            </p>
+        </footer>
+
+    </div>
+
+</div>
 
     <script>
 
