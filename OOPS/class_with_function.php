@@ -14,8 +14,14 @@
             echo 'Sum is: ' . $this->sum();
         }
     }
-
+    
     $math = new Math();
-
+    echo 'Initial Sum is: ' . $math->sum();
+    echo "<br>";
     $math->b = 30;
     $math->sum_result();
+    echo "<br>";
+    echo 'Value of a: ' . $math->a;
+
+
+?>
