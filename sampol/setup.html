@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Setup Authenticator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="min-h-screen flex items-center justify-center bg-slate-900">
+
+    <!-- Modal Overlay -->
+    <div class="fixed inset-0 flex items-center justify-center bg-black/60">
+
+        <!-- Modal Box -->
+        <div class="relative w-full max-w-2xl rounded-2xl bg-[#1B0C33] p-12 text-white shadow-2xl">
+
+            <!-- Close Button -->
+            <button class="absolute right-16 top-16 text-white hover:text-white text-xl">
+                ✕
+            </button>
+
+            <!-- Header -->
+            <div class="flex items-center gap-3 mb-6">
+                <span class="flex h-9 w-9 items-center justify-center rounded-full ">
+                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z">
+                        </path>
+                    </svg>
+
+                </span>
+                <h2 class="text-3xl font-medium">Setup Authenticator</h2>
+            </div>
+
+            <!-- Instructions -->
+            <ol class="mb-6 space-y-2 text-md text-white/80">
+                <li>1. Get the <span class="text-pink-600">Google Authenticator</span> App</li>
+                <li>2. In the App select <span class="font-medium">Set up account</span>.</li>
+                <li>3. Choose <span class="font-medium">Scan a QR code</span>.</li>
+            </ol>
+
+            <!-- Security Key -->
+            <div class="mb-6">
+                <p class="mb-2 text-center text-lg text-white">Security key:</p>
+
+                <div class="rounded-xl p-4 text-center text-md leading-relaxed text-white/90">
+                    GE2DSNTEGE3DQZRRG3DIMRUG12GIYLDHEZ<br>
+                    WMNRZM12DQOLBME3DSNBVMU4DMOJXG4Z<br>
+                    WKNDBMUYTCMBRGQ4TGZLEGU4DENBSMMY<br>
+                    TIYQ
+                </div>
+            </div>
+
+            <!-- QR Code Text -->
+            <p class="mb-8 text-lg text-center font-bold text-pink-600 cursor-pointer hover:underline">
+                QR code
+            </p>
+
+            <!-- Buttons -->
+            <div class="flex justify-end gap-4">
+                <button class="rounded-full bg-white px-6 py-2 text-sm font-medium text-[#853EFF] ">
+                    Cancel
+                </button>
+                <button class="rounded-full bg-[#853EFF] px-6 py-2 text-sm font-medium ">
+                    Next
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

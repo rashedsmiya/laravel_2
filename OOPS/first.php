@@ -1,17 +1,7 @@
 <?php 
+ 
 
-    class calculation{
-        public $a, $b, $c;
+ echo "Good";
 
-        function sum()
-        {
-            $this->c = $this->a + $this->b;
-            return $this->c;
-        }
-
-        function sub()
-        {
-            $this->c = $this->a - $this->b;
-            return $this->c;
-        }
-    }
+ 
+ ?>
